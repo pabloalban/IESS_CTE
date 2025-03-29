@@ -20,6 +20,30 @@ parametros$fec_eje <- Sys.Date()
 # Operating system name
 parametros$opsys <- Sys.info()[[1]]
 
+# Condicional para importar el tipo de letra Linux Libertine en diferentes sistemas operativos
+if ( 'Linux Libertine' %notin% font_families() ) {
+  if ( parametros$opsys == 'Linux' ) {
+    file <- "/usr/share/fonts/opentype/linux-libertine/LinLibertine_DR.otf"
+    if ( file.exists( file ) ) {
+      font_add( "Linux Libertine", file )
+    }
+  } else if ( parametros$opsys == 'Windows' ) {
+    file <- "C:/Program Files/MiKTeX/fonts/opentype/public/libertine/LinLibertine_DR.otf"
+    if ( file.exists( file ) ) {
+      font_add( "Linux Libertine", file )
+    }
+    file <- "C:/Program Files (x86)/MiKTeX/fonts/opentype/public/libertine/LinLibertine_DR.otf"
+    if ( file.exists( file ) ) {
+      font_add( "Linux Libertine", file )
+    }
+    file <- "C:/MiKTeX/fonts/opentype/public/libertine/LinLibertine_DR.otf"
+    if ( file.exists( file ) ) {
+      font_add( "Linux Libertine", file )
+    }
+  }
+}
+showtext_auto()
+
 # Hostname
 parametros$hostname <- Sys.info()[[4]]
 
@@ -59,14 +83,13 @@ parametros$calcular_balance <- FALSE
 
 
 # Configuraciones particulares por seguro ----------------------------------------------------------
-parametros$fec_fin <- ymd( '2022-12-31' )
-parametros$anio_ini <- 2022
-parametros$anio <- 2022 # Año del estudio
+parametros$fec_fin <- ymd( '2024-12-31' )
+parametros$anio_ini <- 2024
+parametros$anio <- 2024 # Año del estudio
 parametros$edad_max <- 105
 
 # Incluir casos según corresponda
-  parametros$horizonte <- 20 # en años
-  parametros$anio_ini <- 2022 # Año inicial de la proyección
+  parametros$horizonte <- 40 # en años
   parametros$anio_fin <- parametros$anio + parametros$horizonte  # Año fin de la proyección
   parametros$edad_max <- 105
 
@@ -85,6 +108,8 @@ parametros$reportes <- paste0( parametros$work_dir, 'Reportes/' )
 parametros$resultados <- paste0( parametros$work_dir, 'Resultados/' )
 parametros$reporte_seguro <- paste0( parametros$work_dir, 'Reportes/Reporte_', 
                                      parametros$seguro, '/' )
+parametros$RData_macro <- paste0( parametros$RData, 'macro/' )
+parametros$Data_macro <- paste0( parametros$Data, 'macro/' )
 
 parametros$calculo_balance <- paste0( parametros$work_dir, 'R/CTE/305_calculo_escenarios_balance.R' )
 parametros$reporte_genera <- paste0( parametros$work_dir, 'R/CTE/600_reporte_latex.R' )
@@ -102,7 +127,7 @@ parametros$resultado_graficos <- paste0( parametros$resultados, parametros$repor
                                          format( parametros$fec_eje, '%Y_%m_%d' ), '/graficos/' )
 
 parametros$graf_modelo_1 <- 'R/401_graf_plantilla.R'
-parametros$graf_ext <- '.png'
+parametros$graf_ext <- '.pdf'
 
 message( paste( rep('-', 100 ), collapse = '' ) )
 rm( list = ls()[ !( ls() %in% 'parametros' ) ]  )

@@ -3,7 +3,7 @@ message( paste( rep( '-', 100 ), collapse = '' ) )
 message( '\tCreación de las tablas del análisis demográfico' )
 
 #Carga de función tildes a latex--------------------------------------------------------------------
-source( 'R/503_tildes_a_latex.R',
+source( 'R/500_tildes_a_latex.R',
        encoding = 'UTF-8',
        echo = FALSE )
 

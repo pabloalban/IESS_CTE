@@ -1,8 +1,9 @@
 message( paste( rep('-', 100 ), collapse = '' ) )
 
 # Cargar función tildes a latex---------------------------------------------------------------------
-source( 'R/500_tildes_a_latex.R', encoding = 'UTF-8', echo = FALSE )
-
+source( 'R/500_tildes_a_latex.R',
+        encoding = 'UTF-8',
+        echo = FALSE )
 
 #Cargando base del RC-------------------------------------------------------------------------------
 
@@ -79,7 +80,7 @@ trans_cargos <- read.table( file_cargos,
                  -direccion_institucional ) %>% 
   mutate( nombre = str_replace( nombre, "  ", " ") ) %>% 
   mutate( nombre = str_squish( nombre ) ) %>% 
-  tildes_a_latex( . )
+  cod_utf_win( . )
   
 
 aux_1 <- trans_cargos %>%   
@@ -258,7 +259,11 @@ cte_servidores <- cte_servidores %>%
   mutate( imp = impo_2023 + 12 ) %>% 
   dplyr::select( -sueldo_2023,
                  -unidad_a_la_que_pertenece,
-                 -impo_2023 )
+                 -impo_2023 ) %>% 
+  filter( !is.na( cargo_coescop ) ) %>% 
+  mutate( imp = if_else( is.na( imp ),
+                         12,
+                         imp ) )
 
 # Guardar los data.frames en un Rdata---------------------------------------------------------------
 message( '\tGuardando lista de servidores de la CTE' )
