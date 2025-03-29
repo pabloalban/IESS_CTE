@@ -222,11 +222,13 @@ tabla_avisos <- tabla_avisos_ent %>%
 #Guardando en un Rdata todas las tablas-------------------------------------------------------------
 message( '\tGuardando en data.frame' )
 
-tablas <- c('tabla_cte_cargo', 
-            'tabla_cte_salario')
-            
-
-save(list = tablas , file = paste0( parametros$RData, 'IESS_tablas_contingencia.RData' ) )
+save( tabla_cte_edad_sexo,
+      tabla_rangos_edad_cargos,
+      tabla_cte_cargo,
+      tabla_cte_salario,
+      tabla_imp_sexo,
+      tabla_avisos, 
+      file = paste0( parametros$RData, 'IESS_tablas_contingencia_cte.RData' ) )
 
 #Borrando data.frames-------------------------------------------------------------------------------
 message( paste( rep('-', 100 ), collapse = '' ) )
