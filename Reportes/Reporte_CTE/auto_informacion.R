@@ -8,20 +8,11 @@ message( '\tEstableciendo información para la configuración del reporte' )
 # load( paste0( parametros$RData, 'COESCOP_transito.RData' ) ) #trásito
 # load( paste0( parametros$RData, 'COESCOP_control.RData' ) ) #control
 load( parametros$macro_rdata_info )
+load( paste0( parametros$RData, 'IESS_tablas_contingencia_cte.RData' ) )
 
 REP <- new.env()
 
 #Parámetros del seguro------------------------------------------------------------------------------
-
-#REP <- new.env( )
-REP$cap_ini <- format ( 
-  parametros$ces_reserva_ini,
-  digits = 2,
-  nsmall = 2,
-  big.mark = '.',
-  decimal.mark = ',',
-  format = 'f'
-)
 REP$corte <- parametros$anio_ini
 REP$rtr_horizonte <- parametros$rtr_horizonte
 REP$anio_fin_valuacion <- parametros$anio_ini + parametros$rtr_horizonte
@@ -290,6 +281,43 @@ REP$macro_roe_int_pub_2020 <- format(
   as.numeric(a <- (filter(roe, anio == 2020)$int_publicas)*100), 
   nsmall = 2, digits = 2, big.mark = '.', decimal.mark = ',', format = 'f' )
 
+#Demografía de los agentes de la CTE----------------------------------------------------------------
+
+REP$dem_n_m <- format( filter(tabla_prom, sexo == 'M' )$n, 
+  nsmall = 2, digits = 2, big.mark = '.', decimal.mark = ',', format = 'f' )
+  
+REP$dem_n_f <- format( filter(tabla_prom, sexo == 'F' )$n, 
+                       nsmall = 2, digits = 2, big.mark = '.', decimal.mark = ',', format = 'f' )
+
+REP$dem_edad_m <- format( filter(tabla_prom, sexo == 'M' )$edad, 
+                       nsmall = 2, digits = 2, big.mark = '.', decimal.mark = ',', format = 'f' )
+
+REP$dem_edad_f <- format( filter(tabla_prom, sexo == 'F' )$edad, 
+                       nsmall = 2, digits = 2, big.mark = '.', decimal.mark = ',', format = 'f' )
+
+REP$dem_sal_m <- format( filter(tabla_prom, sexo == 'M' )$salario, 
+                          nsmall = 2, digits = 2, big.mark = '.', decimal.mark = ',', format = 'f' )
+
+REP$dem_sal_f <- format( filter(tabla_prom, sexo == 'F' )$salario, 
+                          nsmall = 2, digits = 2, big.mark = '.', decimal.mark = ',', format = 'f' )
+
+REP$dem_n_porc_m <- format( tabla_rangos_edad_cargos$por_sexo_M[ nrow( tabla_rangos_edad_cargos ) ], 
+                       nsmall = 2, digits = 2, big.mark = '.', decimal.mark = ',', format = 'f' )
+
+REP$dem_n_porc_f <- format( tabla_rangos_edad_cargos$por_sexo_F[ nrow( tabla_rangos_edad_cargos ) ], 
+                            nsmall = 2, digits = 2, big.mark = '.', decimal.mark = ',', format = 'f' )
+
+REP$dem_n_dist_max <- format( max( tabla_rangos_edad_cargos$total[ -nrow( tabla_rangos_edad_cargos )] ),
+                            nsmall = 0, digits = 2, big.mark = '.', decimal.mark = ',', format = 'f' )
+
+REP$dem_n_dist_porc_max <- format( max( tabla_rangos_edad_cargos$por_total[ -nrow( tabla_rangos_edad_cargos ) ] ),
+                              nsmall = 2, digits = 2, big.mark = '.', decimal.mark = ',', format = 'f' )
+
+REP$dem_n_der_max <- format( filter( tabla_rangos_edad_cargos, rango_edad == '[ 60 - 70 ]' )$total,
+                              nsmall = 0, digits = 2, big.mark = '.', decimal.mark = ',', format = 'f' )
+
+REP$dem_n_der_porc_max <- format( filter( tabla_rangos_edad_cargos, rango_edad == '[ 60 - 70 ]' )$por_total,
+                                  nsmall = 2, digits = 2, big.mark = '.', decimal.mark = ',', format = 'f' )
 
 # # Demografía de los agentes de Control--------------------------------------------------------------
 # 

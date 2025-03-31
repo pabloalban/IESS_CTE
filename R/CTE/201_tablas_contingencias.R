@@ -9,9 +9,7 @@ load( paste0( parametros$RData, 'IESS_avisos_cte.RData' ) )
 #Tablas de contingencia por edad y sexo-------------------------------------------------------------
 message( paste( rep('-', 100 ), collapse = '' ) )
 
-message( '\tResumiendo información en tablas de contingencia' )
-
-#CTE------------------------------------------------------------------------------------------------
+message( '\tResumiendo información en tablas de contingencia de la CTE' )
 
 #Tabla por edad y sexo------------------------------------------------------------------------------
 tabla_cte_edad_sexo <- cte_servidores %>%
@@ -36,7 +34,7 @@ tabla_cte_edad_sexo <- cte_servidores %>%
 cortes_edad <- c( 19, seq( 30, 70, 10 ) )
 
 etiquetas_edad <- c( paste0( 
-  "[ ",
+  "( ",
   formatC( 
     c( seq( 20, 60, 10 ) ),
     digits = 0,
@@ -89,7 +87,7 @@ tabla_rangos_edad_cargos <- tabla_cte_edad_sexo %>%
                  por_total ) 
 
 #Tabla cargos por sexo------------------------------------------------------------------------------
-tabla_cte_cargo <- cte_servidores %>%
+tabla_cte_cargo_sexo <- cte_servidores %>%
   filter( !is.na( fecha_nacimiento ) ) %>%
   filter( fecha_nacimiento < as.Date("31/12/2024","%d/%m/%Y") ) %>%
   mutate( edad = round( age_calc( fecha_nacimiento,
@@ -121,6 +119,12 @@ tabla_cte_cargo <- cte_servidores %>%
                  por_sexo_M,
                  total,
                  por_total ) 
+
+#Tabla cargos cte-----------------------------------------------------------------------------------
+tabla_cte_cargo <-  cte_servidores %>%
+  group_by( cargo_coescop ) %>%
+  summarise( n = n( ) ) %>% 
+  ungroup( )
 
 #Salario promedio por cargo y sexo------------------------------------------------------------------
 
@@ -195,7 +199,8 @@ tabla_imp_sexo <- cte_servidores %>%
 avisos_cte <- avisos_cte %>% 
   mutate( sexo = if_else( sexo_afiliado %in% c( 'Hombre' ),
                           'M',
-                          'F' ) )
+                          'F' ) ) %>% 
+  filter( dias_cesante > 360 | is.na( dias_cesante ) )
 
 tabla_avisos_ent <- avisos_cte %>% 
   filter( codtipnovhislab == 'ENT' ) %>% 
@@ -205,7 +210,6 @@ tabla_avisos_ent <- avisos_cte %>%
   mutate( entradas = if_else( anio == '2024',
                               round( 12 * entradas / 9, 0 ),
                               entradas ) )
-
 
 tabla_avisos_sal <- avisos_cte %>% 
   filter( codtipnovhislab == 'SAL' ) %>% 
@@ -217,17 +221,34 @@ tabla_avisos_sal <- avisos_cte %>%
                              salidas ) )
 
 tabla_avisos <- tabla_avisos_ent %>% 
-  left_join( ., tabla_avisos_sal, by = 'anio' )
+  left_join( ., tabla_avisos_sal, by = 'anio' ) %>% 
+  filter( anio > 2015 )
+
+#Tabla de promedios por sexo------------------------------------------------------------------------
+
+tabla_prom <- cte_servidores %>% 
+  mutate( edad = round( age_calc( fecha_nacimiento,
+                                  enddate = as.Date( "31/12/2024", "%d/%m/%Y" ),
+                                  units = "years",
+                                  precise = TRUE ) ) ) %>%
+  group_by( sexo ) %>% 
+  summarise( n = n( ),
+             salario = mean( sueldo, na.rm = TRUE ),
+             imp = mean ( imp, na.rm = TRUE ),
+             edad = mean( edad, na.rm = TRUE ) ) %>% 
+  ungroup( )
 
 #Guardando en un Rdata todas las tablas-------------------------------------------------------------
 message( '\tGuardando en data.frame' )
 
 save( tabla_cte_edad_sexo,
       tabla_rangos_edad_cargos,
+      tabla_cte_cargo_sexo,
       tabla_cte_cargo,
       tabla_cte_salario,
       tabla_imp_sexo,
-      tabla_avisos, 
+      tabla_avisos,
+      tabla_prom,
       file = paste0( parametros$RData, 'IESS_tablas_contingencia_cte.RData' ) )
 
 #Borrando data.frames-------------------------------------------------------------------------------

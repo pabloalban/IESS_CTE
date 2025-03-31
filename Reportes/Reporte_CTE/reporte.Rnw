@@ -62,8 +62,8 @@
 % % <<cap07, child='07_analisis_financiero.Rnw'>>=
 % % @
 % 
-% <<cap08, child='08_demografia.Rnw'>>=
-% @
+<<cap08, child='08_demografia.Rnw'>>=
+@
 %   
 % <<cap10, child='10_hipotesis.Rnw'>>=
 % @ 

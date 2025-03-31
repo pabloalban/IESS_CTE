@@ -200,120 +200,120 @@ Elaborado: DAIE}
 
 En términos monetarios, los años con mayores incrementos fueron el año 2003, con incremento en USD \Sexpr{REP$macro_sbu_incremento_2003}; y, el año 2008, con incremento igual a USD \Sexpr{REP$macro_sbu_incremento_2008}, en términos porcentuales fue el año 2001 con el \Sexpr{REP$macro_sbu_tasa_cre_2001}\%. En cambio, los años con menor incremento fue el 2021 (\Sexpr{REP$macro_sbu_tasa_cre_2021}\%). En los últimos siete (7) años, el SBU creció en promedio \Sexpr{REP$macro_sub_promedio_7anios}\%.
 
-% % ------------------------------------------------------------------------------------------------
-\subsection{Evolución histórica de los salarios}
-
-Los ingresos por aportes que recibe el IESS es un porcentaje fijo de la materia gravada y está normado mediante la \legalcite{ResIESS_CD515}. Una de las variables claves de este estudio es la tasa de crecimiento de los salarios; pues de esta, se determina de cierta manera el ingreso futuro por concepto de los aportes. A continuación, se muestra la evolución histórica de los salarios en la tabla \ref{tab:iess_salarios} y la figura \ref{fig:iess_salarios}, los cuales fueron extraídos de las bases de datos de la Dirección Nacional de Afiliación y Cobertura (DNAC).
-
-\begin{figure}[H]
-\centering
-\caption{Evolución histórica del salario promedio de los cotizantes al SGO}
-\label{fig:iess_salarios}
-\includegraphics[scale=1]{graficos/iess_salarios_evo.pdf}
-\caption*{\scriptsize Fuente: Planillas de la DNAC - IESS \\
-  Elaborado: DAIE}
-\end{figure}
-
-{\setlength{\tabcolsep}{7pt}
-{\fontsize{11}{14}\selectfont
-\begin{longtable}[H]{crrr}
-  \caption{Evolución histórica del salario promedio de los cotizantes al SGO}
-\label{tab:iess_salarios} \\
-\toprule
- \multicolumn{1}{c}{\multirow{2}[2]{*}{Fecha:}}  &
- \multicolumn{1}{c}{Salario} &
-\multicolumn{1}{c}{Incremento} &
-\multicolumn{1}{c}{Tasa de } \\
-&
- \multicolumn{1}{c}{Promedio (USD)} &
- \multicolumn{1}{c}{(USD)} &
-\multicolumn{1}{c}{Crecimiento (\%) } \\
-\midrule
-\endfirsthead
-
-\toprule
- \multicolumn{1}{c}{\multirow{2}[2]{*}{Fecha:}}  &
- \multicolumn{1}{c}{Salario} &
-\multicolumn{1}{c}{Incremento} &
-\multicolumn{1}{c}{Tasa de } \\
-&
- \multicolumn{1}{c}{Promedio (USD)} &
- \multicolumn{1}{c}{(USD)} &
-\multicolumn{1}{c}{Crecimiento (\%) } \\
-	\midrule
-\endhead
-
-\bottomrule \multicolumn{4}{c}{continúa...} \\
-\endfoot
-%\hline
-\caption*{\scriptsize Fuente: Planillas de la DNAC - IESS \\
-Elaborado: DAIE}
-\endlastfoot
-  \input{tablas/iess_salarios.tex}
-\end{longtable}
-}
-}
-
-A diciembre de 2022, los cotizantes del Seguro General Obligatorio registraron un salario promedio igual a USD \Sexpr{REP$macro_salarios_prom_2022} (USD \Sexpr{REP$macro_increm_2022} más que en diciembre de 2021), lo representa un crecimiento, con respeto a diciembre de 2021, igual a \Sexpr{REP$macro_increm_tasa_incre_2022} \%. En el año 2008, se registró el mayor crecimiento del salario promedio (\Sexpr{REP$macro_increm_tasa_incre_2008}\%); mientras que en el año 2020, se redujo en \Sexpr{REP$macro_increm_tasa_incre_2020}\% debido al impacto de la Pandemia de la COVID – 19. En los últimos 10 años, el salario creció en promedio \Sexpr{REP$macro_increm_promedio_10_anios}\%.
-
-% % % % --------------------------------------------------------------------------------------------
-\subsection{Evolución histórica de la tasa de crecimiento real del PIB del Ecuador}
-
-La información referente al Producto Interno Bruto del Ecuador se obtuvo de la página oficial del BCE\footnote{\url{https://contenido.bce.fin.ec/documentos/PublicacionesNotas/Catalogo/CuentasNacionales/Indices/c122032023.htm}}. En primer lugar, se debe indicar que el PIB a precios constantes se mide en términos de dólares constantes del año 2007, a diferencia del PIB a precios actuales, los cuales se presentan en la tabla \ref{tab:iess_pib_real} y figura \ref{fig:iess_pib_real}.
-
-
-{\setlength{\tabcolsep}{5pt}
-{\fontsize{11}{14}\selectfont
-\begin{longtable}[H]{crrc}
-  \caption{Evolución histórica del PIB del Ecuador}
-\label{tab:iess_pib_real} \\
-\toprule
- \multicolumn{1}{c}{\multirow{2}[2]{*}{Año:}}  &
- \multicolumn{1}{c}{PIB a precios} &
-\multicolumn{1}{c}{PIB a precios} &
-\multicolumn{1}{c}{Tasa de} \\
-&
- \multicolumn{1}{c}{actuales (USD)} &
- \multicolumn{1}{c}{constantes 2007 (USD)} &
-\multicolumn{1}{c}{Crecimiento Real (\%)} \\
-\midrule
-\endfirsthead
-
-\toprule
- \multicolumn{1}{c}{\multirow{2}[2]{*}{Año:}}  &
- \multicolumn{1}{c}{PIB a precios} &
-\multicolumn{1}{c}{PIB a precios} &
-\multicolumn{1}{c}{Tasa de} \\
-&
- \multicolumn{1}{c}{actuales (USD)} &
- \multicolumn{1}{c}{constantes 2007 (USD)} &
-\multicolumn{1}{c}{Crecimiento Real (\%)} \\
-	\midrule
-\endhead
-
-\bottomrule \multicolumn{4}{c}{continúa...} \\
-\endfoot
-%\hline
-\caption*{\scriptsize Fuente: Banco Central del Ecuador \\
-Elaborado: DAIE}
-\endlastfoot
-  \input{tablas/iess_pib_real.tex}
-\end{longtable}
-}
-}
-
-\begin{figure}[H]
-\centering
-\caption{Evolución histórica del crecimiento real del PIB del Ecuador}
-\label{fig:iess_pib_real}
-\includegraphics[scale=1.2]{graficos/iess_pib_real.pdf}
-\caption*{\scriptsize Fuente: Banco Mundial. \\
-  Elaborado: DAIE}
-\end{figure}
-
-Desde la recesión atribuida a la caída del precio del petróleo en diciembre de 2014, la cual afectó directamente en la inversión pública y austeridad por parte del Estado, se observó una contracción del PIB igual a \Sexpr{REP$macro_pib_real_crecimiento_2016}\% en 2016 y bajas tasas de crecimiento. En promedio, la tasa de crecimiento del PIB en términos constantes es igual \Sexpr{REP$macro_pib_real_prom_crec_7_anios}\% (período 2015 a 2022).
-
-Por último, la crisis económica provocada por la pandemia COVID - 19 condujo a la saturación del sistema de salud público y varios confinamientos, lo cual conllevó a la reducción del PIB en \Sexpr{REP$macro_pib_real_crecimiento_2020}\% en 2020; y, en recuperación de la pandemia, se creció en \Sexpr{REP$macro_pib_real_crecimiento_2021}\% en 2021 y \Sexpr{REP$macro_pib_real_crecimiento_2022}\% en 2022.
+% % % ------------------------------------------------------------------------------------------------
+% \subsection{Evolución histórica de los salarios}
+% 
+% Los ingresos por aportes que recibe el IESS es un porcentaje fijo de la materia gravada y está normado mediante la \legalcite{ResIESS_CD515}. Una de las variables claves de este estudio es la tasa de crecimiento de los salarios; pues de esta, se determina de cierta manera el ingreso futuro por concepto de los aportes. A continuación, se muestra la evolución histórica de los salarios en la tabla \ref{tab:iess_salarios} y la figura \ref{fig:iess_salarios}, los cuales fueron extraídos de las bases de datos de la Dirección Nacional de Afiliación y Cobertura (DNAC).
+% 
+% \begin{figure}[H]
+% \centering
+% \caption{Evolución histórica del salario promedio de los cotizantes al SGO}
+% \label{fig:iess_salarios}
+% \includegraphics[scale=1]{graficos/iess_salarios_evo.pdf}
+% \caption*{\scriptsize Fuente: Planillas de la DNAC - IESS \\
+%   Elaborado: DAIE}
+% \end{figure}
+% 
+% {\setlength{\tabcolsep}{7pt}
+% {\fontsize{11}{14}\selectfont
+% \begin{longtable}[H]{crrr}
+%   \caption{Evolución histórica del salario promedio de los cotizantes al SGO}
+% \label{tab:iess_salarios} \\
+% \toprule
+%  \multicolumn{1}{c}{\multirow{2}[2]{*}{Fecha:}}  &
+%  \multicolumn{1}{c}{Salario} &
+% \multicolumn{1}{c}{Incremento} &
+% \multicolumn{1}{c}{Tasa de } \\
+% &
+%  \multicolumn{1}{c}{Promedio (USD)} &
+%  \multicolumn{1}{c}{(USD)} &
+% \multicolumn{1}{c}{Crecimiento (\%) } \\
+% \midrule
+% \endfirsthead
+% 
+% \toprule
+%  \multicolumn{1}{c}{\multirow{2}[2]{*}{Fecha:}}  &
+%  \multicolumn{1}{c}{Salario} &
+% \multicolumn{1}{c}{Incremento} &
+% \multicolumn{1}{c}{Tasa de } \\
+% &
+%  \multicolumn{1}{c}{Promedio (USD)} &
+%  \multicolumn{1}{c}{(USD)} &
+% \multicolumn{1}{c}{Crecimiento (\%) } \\
+% 	\midrule
+% \endhead
+% 
+% \bottomrule \multicolumn{4}{c}{continúa...} \\
+% \endfoot
+% %\hline
+% \caption*{\scriptsize Fuente: Planillas de la DNAC - IESS \\
+% Elaborado: DAIE}
+% \endlastfoot
+%   \input{tablas/iess_salarios.tex}
+% \end{longtable}
+% }
+% }
+% 
+% A diciembre de 2022, los cotizantes del Seguro General Obligatorio registraron un salario promedio igual a USD \Sexpr{REP$macro_salarios_prom_2022} (USD \Sexpr{REP$macro_increm_2022} más que en diciembre de 2021), lo representa un crecimiento, con respeto a diciembre de 2021, igual a \Sexpr{REP$macro_increm_tasa_incre_2022} \%. En el año 2008, se registró el mayor crecimiento del salario promedio (\Sexpr{REP$macro_increm_tasa_incre_2008}\%); mientras que en el año 2020, se redujo en \Sexpr{REP$macro_increm_tasa_incre_2020}\% debido al impacto de la Pandemia de la COVID – 19. En los últimos 10 años, el salario creció en promedio \Sexpr{REP$macro_increm_promedio_10_anios}\%.
+% 
+% % % % % --------------------------------------------------------------------------------------------
+% \subsection{Evolución histórica de la tasa de crecimiento real del PIB del Ecuador}
+% 
+% La información referente al Producto Interno Bruto del Ecuador se obtuvo de la página oficial del BCE\footnote{\url{https://contenido.bce.fin.ec/documentos/PublicacionesNotas/Catalogo/CuentasNacionales/Indices/c122032023.htm}}. En primer lugar, se debe indicar que el PIB a precios constantes se mide en términos de dólares constantes del año 2007, a diferencia del PIB a precios actuales, los cuales se presentan en la tabla \ref{tab:iess_pib_real} y figura \ref{fig:iess_pib_real}.
+% 
+% 
+% {\setlength{\tabcolsep}{5pt}
+% {\fontsize{11}{14}\selectfont
+% \begin{longtable}[H]{crrc}
+%   \caption{Evolución histórica del PIB del Ecuador}
+% \label{tab:iess_pib_real} \\
+% \toprule
+%  \multicolumn{1}{c}{\multirow{2}[2]{*}{Año:}}  &
+%  \multicolumn{1}{c}{PIB a precios} &
+% \multicolumn{1}{c}{PIB a precios} &
+% \multicolumn{1}{c}{Tasa de} \\
+% &
+%  \multicolumn{1}{c}{actuales (USD)} &
+%  \multicolumn{1}{c}{constantes 2007 (USD)} &
+% \multicolumn{1}{c}{Crecimiento Real (\%)} \\
+% \midrule
+% \endfirsthead
+% 
+% \toprule
+%  \multicolumn{1}{c}{\multirow{2}[2]{*}{Año:}}  &
+%  \multicolumn{1}{c}{PIB a precios} &
+% \multicolumn{1}{c}{PIB a precios} &
+% \multicolumn{1}{c}{Tasa de} \\
+% &
+%  \multicolumn{1}{c}{actuales (USD)} &
+%  \multicolumn{1}{c}{constantes 2007 (USD)} &
+% \multicolumn{1}{c}{Crecimiento Real (\%)} \\
+% 	\midrule
+% \endhead
+% 
+% \bottomrule \multicolumn{4}{c}{continúa...} \\
+% \endfoot
+% %\hline
+% \caption*{\scriptsize Fuente: Banco Central del Ecuador \\
+% Elaborado: DAIE}
+% \endlastfoot
+%   \input{tablas/iess_pib_real.tex}
+% \end{longtable}
+% }
+% }
+% 
+% \begin{figure}[H]
+% \centering
+% \caption{Evolución histórica del crecimiento real del PIB del Ecuador}
+% \label{fig:iess_pib_real}
+% \includegraphics[scale=1.2]{graficos/iess_pib_real.pdf}
+% \caption*{\scriptsize Fuente: Banco Mundial. \\
+%   Elaborado: DAIE}
+% \end{figure}
+% 
+% Desde la recesión atribuida a la caída del precio del petróleo en diciembre de 2014, la cual afectó directamente en la inversión pública y austeridad por parte del Estado, se observó una contracción del PIB igual a \Sexpr{REP$macro_pib_real_crecimiento_2016}\% en 2016 y bajas tasas de crecimiento. En promedio, la tasa de crecimiento del PIB en términos constantes es igual \Sexpr{REP$macro_pib_real_prom_crec_7_anios}\% (período 2015 a 2022).
+% 
+% Por último, la crisis económica provocada por la pandemia COVID - 19 condujo a la saturación del sistema de salud público y varios confinamientos, lo cual conllevó a la reducción del PIB en \Sexpr{REP$macro_pib_real_crecimiento_2020}\% en 2020; y, en recuperación de la pandemia, se creció en \Sexpr{REP$macro_pib_real_crecimiento_2021}\% en 2021 y \Sexpr{REP$macro_pib_real_crecimiento_2022}\% en 2022.
 
 % % % ---------------------------------------------------------------------------------------------
 \subsection{Evolución histórica de la tasa de crecimiento de las pensiones}

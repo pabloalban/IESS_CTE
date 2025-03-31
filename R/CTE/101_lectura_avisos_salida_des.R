@@ -105,6 +105,9 @@ avisos_cte <- avisos_cte %>%
   mutate( dias_cesante = if_else( codtipnovhislab == 'SAL' & lead( codtipnovhislab )  == 'ENT',
                                   as.integer( lead( fch_inicio_novedad ) - fch_inicio_novedad ),
                                   NA ) ) %>% 
+  mutate( dias_cesante = if_else( lag( codtipnovhislab) == 'SAL' & codtipnovhislab  == 'ENT',
+                                  as.integer( fch_inicio_novedad - lag( fch_inicio_novedad ) ),
+                                  dias_cesante ) ) %>% 
   ungroup( ) %>% 
   as_tibble( )
 
