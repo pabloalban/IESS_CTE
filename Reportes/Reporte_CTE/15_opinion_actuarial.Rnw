@@ -53,17 +53,17 @@ asociaciones internacionales como la OIT y las asociación de actuarios.
 Del presente estudio es responsabilidad del Director Actuarial, de Investigación y Estadística.
 
 \section{Firma de responsabilidad}
-Quito, 01 de abril de 2025 \\
+Quito, \Sexpr{parametros$fecha_dia} de \Sexpr{parametros$fecha_mes} de \Sexpr{parametros$fecha_anio} \\
+
+Atentamente,
 
 \vspace{2cm}
-Atentamente,
-\vspace{1cm}
 %--------------------------------------------------------------------------------------------------
 % \begin{figure}[H]
 % 	\centering
 % 		\includegraphics[scale=0.28]{graficos/firma_actuario.png}
 % 	\end{figure}
-\vspace{-2cm}
+%\vspace{-2cm}
 \begin{center}
 \textbf{Ramiro Vega Suárez, Lic.} \\
 Director Actuarial, de Investigación y Estadística \\

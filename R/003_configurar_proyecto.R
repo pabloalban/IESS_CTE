@@ -80,7 +80,10 @@ message( '\tConfiguración seguro' )
 parametros$seguro <- c("CTE")
 parametros$hacer_ana_dem <- FALSE
 parametros$calcular_balance <- FALSE
-
+parametros$fecha <- Sys.Date( )
+parametros$fecha_anio <- year( Sys.Date( ) )
+parametros$fecha_mes <- format( parametros$fecha, "%B" )
+parametros$fecha_dia <- day( Sys.Date( ) )
 
 # Configuraciones particulares por seguro ----------------------------------------------------------
 parametros$fec_fin <- ymd( '2024-12-31' )
@@ -89,9 +92,9 @@ parametros$anio <- 2025 # Año del estudio
 parametros$edad_max <- 105
 
 # Incluir casos según corresponda
-  parametros$horizonte <- 25 # en años
-  parametros$anio_fin <- parametros$anio + parametros$horizonte  # Año fin de la proyección
-  parametros$edad_max <- 105
+parametros$horizonte <- 25 # en años
+parametros$anio_fin <- parametros$anio + parametros$horizonte  # Año fin de la proyección
+parametros$edad_max <- 105
 
 # Variables automáticas ----------------------------------------------------------------------------
 parametros$Data <- paste0( parametros$data_server, 'Data/' )
