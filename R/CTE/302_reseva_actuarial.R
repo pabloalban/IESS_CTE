@@ -8,7 +8,6 @@ load( paste0( parametros$RData, 'ISSPOL_coeficientes.RData' ) )
 message("\tCalculando reserva matemática")
 
 #Pensionistas con derecho a IVM al corte------------------------------------------------------------
-
 derecho_ivm <- malla_coescop %>%
   filter( a_d_ivm == 0 ) %>%
   left_join(., coeficientes, by = c('anios_imp'='anio') ) %>%
@@ -56,9 +55,9 @@ sum(derecho_ivm$reserva_ivm, na.rm = TRUE )
 #Pensionistas sin derecho a IVM al corte------------------------------------------------------------
 
 sin_derecho_ivm <- malla_coescop %>%
-  filter( anio_derecho_coescop > 2023 ) %>%
+  filter( anio_derecho_coescop > 2024 ) %>%
   mutate( edad = edad_i ) %>%
-  mutate( imp_tot_coescop =  a_d_coescop + anios_imp ) %>%
+  mutate( imp_tot_coescop =  a_d_coescop + anios_imp + 1 ) %>%
   left_join(., coeficientes, by = c('imp_tot_coescop'='anio') ) %>%
   mutate( coef = coef_isspol ) %>%
   dplyr::select( -coef_isspol, - coef_iess ) %>%
@@ -120,7 +119,7 @@ sin_derecho_ivm <- sin_derecho_ivm %>%
 #Reserva matemática---------------------------------------------------------------------------------
 
 sin_derecho_ivm <- sin_derecho_ivm %>%
-  mutate( res_mat_temporal =  factor * i_p_acu * a_x_n * 13 * coef_isspol * ( salario + 425 ) )   %>%
+  mutate( res_mat_temporal =  factor * i_p_acu * a_x_n * 13 * coef_isspol * ( salario + 470 ) )   %>%
   mutate( res_mat_diferida = factor * i_p_acu * a_n_w * (  coef * 13 * salario ) ) %>%
   mutate( reserva_matematica = res_mat_temporal + res_mat_diferida ) %>%
   mutate( reserva_ivm = factor * coef_iess * i_p_acu * a_x * salario  * 13 )
@@ -145,7 +144,6 @@ save( reserva_matematica,
       file = paste0( parametros$RData, 'IESS_reserva_matematica.RData' ) )
 
 # Borrar elementos restantes -----------------------------------------------------------------------
-message(paste(rep("-", 100), collapse = ""))
-rm(list = ls()[!(ls() %in% c("parametros"))])
-gc()
-
+message( paste( rep( "-", 100 ), collapse = "" ) )
+rm( list = ls( )[!( ls( ) %in% c( "parametros" ) ) ] )
+gc( )

@@ -141,7 +141,7 @@ tabla_cte_salario <- cte_servidores %>%
 
 #Funcionarios por imposiciones por sexo-------------------------------------------------------------
 
-cortes_imp <- c( 1, 12, 24, 48, 72, 120, 180, 240, 300, 360, 530 )
+cortes_imp <- c( 0, 12, 24, 48, 72, 120, 180, 240, 300, 360, 530 )
 
 etiquetas_imp <- c( paste0( 
   "( ",

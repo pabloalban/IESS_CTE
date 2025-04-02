@@ -210,8 +210,8 @@ Así, se tiene las transiciones que llamaremos no markovianas que listamos a con
 \end{itemize}
 
 No se registra la transición de afiliado activo a pensionista por incapacidad permanente parcial ($2
-\rightarrow 6$), debido al artículo 29 de la Resolución No. C.D. 513, el cual establece que: “ (…)
-el afiliado calificado con incapacidad permanente parcial tiene derecho a una indemnización, (…)”;
+\rightarrow 6$), debido al artículo 29 de la Resolución No. C.D. 513, el cual establece que: “ (...)
+el afiliado calificado con incapacidad permanente parcial tiene derecho a una indemnización, (...)”;
 por consiguiente, no se registraran nuevos pensionistas por incapacidad permanente parcial, como se
 estipulaba en la anterior normativa que otorgaba una renta vitalicia, de los cuales al 31 de
 diciembre de 2020 se registró 5.059 pensionistas que obtuvieron su derecho a una renta vitalicia. 

@@ -14,8 +14,6 @@ coeficientes <- read_excel(file,
                                na = "",
                                skip = 0) %>% clean_names()
 
-
-
 #Guardando en un Rdata------------------------------------------------------------------------------
 message( '\tGuardando coeficientes en un solo data.frame' )
 

@@ -6,7 +6,7 @@ message( '\tLectura de SBU' )
 file<-paste0(parametros$Data, 'IESS_tabla_mortalidad.xlsx' )
 
 #Cargar función tíldes a latex----------------------------------------------------------------------
-source( 'R/503_tildes_a_latex.R', encoding = 'UTF-8', echo = FALSE )
+source( 'R/500_tildes_a_latex.R', encoding = 'UTF-8', echo = FALSE )
 
 #Listado de beneficiarios---------------------------------------------------------------------------
 tabla_mortalidad <- read_excel(file,

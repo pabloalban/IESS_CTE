@@ -114,10 +114,72 @@ de cada año, en la misma proporción que la inflación promedio anual del año 
 \section{Aportes y beneficios}
 \label{chp_hipotesis:apobenef}
 
-A lo largo de este estudio suponemos que la tasa de aportación para el \Sexpr{REP_seg} continuará conforme a lo determinado en la Resolución No. C.D. 501 del 13 de noviembre de 2015, reformada por la Resolución No. C.D. 515 del 30 de marzo de 2016. 
+A partir de ese momento se iniciará con el aporte personal de su remuneración mensual unificada del
+18.97\% de la RMU como aporte personal. La diferencia de financiamiento por los años de reducción del
+aporte, esto es entre 25 y 30 años y entre requisitos de edad, será reconocido por parte de la Comisión
+de Tránsito del Ecuador, como reserva matemática, valor que será determinado por la unidad
+administrativa correspondiente del IESS, y, será depositado en el Instituto Ecuatoriano de Seguridad
+Social previo a la entrega del beneficio.
 
-En cuanto a los beneficios, el presente estudio supone que se concederán bajo la normativa actual vigente.
+{\fontsize{10}{11}\selectfont
+\begin{longtable}[H]{lrrr}
+\caption{Porcentaje de aportación a los trabajadores de la \Sexpr{REP_seg}}\\
+\label{tab:coescop_tab_tasa} \\
+\toprule
+Seguro:	&
+Personal (\%) &
+Patronal (\%) &
+Total (\%)\\
+\midrule
+\endfirsthead
 
+\toprule
+Seguro:	&
+Personal (\%) &
+Patronal (\%) &
+Total (\%)\\
+\midrule
+\endhead
+
+\bottomrule
+\multicolumn{4}{r}{continúa...} \\
+\endfoot
+
+%\bottomrule
+\endlastfoot
+\input{tablas/coescop_tab_tasa.tex}
+\end{longtable}
+}
+
+La pensión estará sujeta a la siguiente tabla porcentual y de acuerdo con su última remuneración mensual que hubiere percibido:
+
+{\fontsize{10}{10}\selectfont
+\begin{longtable}[H]{C{2cm}R{2.5cm}}
+\caption{}\\
+\label{tab:cte_coeficientes} \\
+\toprule
+Años de Aportación:
+& Porcentaje de RMU
+\\
+\midrule
+\endfirsthead
+
+\toprule
+Tiempo de servicio:
+& Porcentaje del sueldo imponible
+\\
+\midrule
+\endhead
+
+\bottomrule
+\multicolumn{2}{r}{continúa...} \\
+\endfoot
+
+%\bottomrule
+\endlastfoot
+\input{tablas/coescop_tab_coeficientes.tex}
+\end{longtable}
+}
 %---------------------------------------------------------------------------------------------------
 \section{Dolarización}
 \label{chp_hipotesis:dolariza}
@@ -131,7 +193,7 @@ sistema de dolarización de la economía se mantendrá vigente en todo el horizo
 \label{chp_hipotesis:paramecfin:resumparam}
 
 En la tabla \ref{tab:iess_hip_macro} se presentan los promedios de los valores estimados de tasas de
-variación, período 2022 a 2061, el detalle de los cálculos se encuentra en el capítulo \ref{chp_contexto}. 
+variación, período 2025 a 2050, el detalle de los cálculos se encuentra en el capítulo \ref{chp_contexto}. 
 
  \begin{table}[H]
  \centering

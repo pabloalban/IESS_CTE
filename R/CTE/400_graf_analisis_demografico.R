@@ -64,6 +64,7 @@ label <- format( aux$n, nsmall = 0, digits = 2, big.mark = '.', decimal.mark = '
 
 iess_bar_cte <- ggplot( aux, aes( x = cargo_coescop, y = n ) ) + 
   geom_bar( stat = "identity", fill = parametros$iess_green ) +
+  scale_y_continuous( limits = c( 0, 2500 ) ) + 
   theme_bw( ) +
   plt_theme +
   geom_text( aes( label = label ), 
@@ -73,9 +74,9 @@ iess_bar_cte <- ggplot( aux, aes( x = cargo_coescop, y = n ) ) +
              position = position_dodge( 0.9 ),
              angle = 0,
              family = 'Linux Libertine',
-             size = 4 ) + 
+             size = 3 ) + 
   labs( x = "", y = "Número de Servidores" )+
-  theme( axis.text.x = element_text( angle = 70, vjust = 1, hjust = 1 ) )
+  theme( axis.text.x = element_text( angle = 70, vjust = 1, hjust = 1, size = 7 ) )
 
 ggsave( plot = iess_bar_cte, 
         filename = paste0( parametros$resultado_graficos, 'iess_bar_cte', parametros$graf_ext ),

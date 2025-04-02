@@ -6,20 +6,7 @@
 \section{Objetivo del estudio}
 \label{chp_res_ejec:objeto}
 
-Con la finalidad de cumplir con la Disposición Transitoria Segunda del Código Orgánico de
-las Entidades de Seguridad Ciudadana y Orden Público, se emite el presente estudio actuarial, con fecha de corte 31 de diciembre de 2022, un horizonte de 20 años.
-
-%---------------------------------------------------------------------------------------------------
-\section{Código Orgánico de las Entidades de Seguridad Ciudadana y Orden Público}
-\label{chp_res_ejec:descripcion}
-
-En concordancia con la Disposición Transitoria Segunda del Código Orgánico de las Entidades de Seguridad Ciudadana y Orden Público - COESCOP, la cual declara que:
-
-\begin{quote}
-
-\textit{``El Ministerio rector en materia laboral y el Instituto Ecuatoriano de Seguridad Social realizarán los estudios técnicos y actuariales con el objetivo de detectar particularidades laborales respecto de las funciones que cumplen los servidores sujetos a este Código, en un plazo no mayor a trescientos sesenta días. De determinarse pertinente, las condiciones prestacionales para este grupo se otorgarán siempre que se encuentren debidamente financiadas por el empleador y el servidor, y se modificarán mediante la reforma de la normativa correspondiente''}
-
-\end{quote}
+Con la finalidad de cumplir con la disposición del Oficio Nro. SB-INCSS-2025-0029-O, de fecha 20 de marzo de 2025, se emite el presente estudio actuarial, con fecha de corte 31 de diciembre de 2024, un horizonte de 25 años, período 31/12/2024 a 31/12/2049.
 
 %---------------------------------------------------------------------------------------------------
 \section{Hipótesis y supuestos claves del estudio}
@@ -43,61 +30,27 @@ A manera de resumen, se describen las principales hipótesis de este estudio:
 
 %---------------------------------------------------------------------------------------------------
 \section{Esquema pensional}
-\label{chp_valuacion:esquema}
-Después de escuchar a los diferentes representantes de los trabajadores sujetos al COESCOP y los colaboradores del IESS, mediante reuniones de trabajo en las oficinas de la Dirección Actuarial, de Investigación y Estadística, y la Dirección del Seguro General de Riesgos del Trabajo, se llegó al consenso que la aspiración de este grupo de trabajadores es obtener una jubilación anticipada, con las mismas características de las jubilaciones de retiro entregadas por ISSPOL o el ISSFA. Con este propósito, se propone el siguiente sistema pensional para los trabajadores regidos por el COESCOP:
+\label{chp_valuacion:esquema_res}
+
+De acuerdo al proyecto de JUBILACIÓN ESPECIAL DE LAS Y LOS SERVIDORES PÚBLICOS DEL CUERPO DE VIGILANCIA LA COMISIÓN DE TRÁNSITO DEL ECUADOR, se tiene el siguiente esquema pensional:
 
 \textbf{1. Requisitos:}
 
-Acredita un mínimo de veinte (20) años de servicio activo y efectivo, sin considerar abonos por tiempo de servicio, riesgos profesionales y otras compensaciones, en entidades sujetas al Código Orgánico de Entidades de Seguridad Ciudadana y Orden Público.
+Se podrá acoger al derecho a jubilación quienes hayan acreditado veinte y cinco años de imposiciones,
+sin límite de edad.
 
-\textbf{2. Financiamiento:}
+\textbf{2. Prestaciones:}
 
-2.1. Subir la tasa de aportación personal al Seguro de IVM de 11,06\% a 12,90\%, dejando las mismas tasas de aportación para el resto de los seguros especializados del IESS, según la siguiente tabla:
-
-{\fontsize{10}{11}\selectfont
-\begin{longtable}[H]{lrrr}
-\caption{Porcentaje de aportación a los trabajadores del COESCOP}\\
-\label{tab:coescop_tab_tasa} \\
-\toprule
-Seguro:	&
-Personal &
-Patronal &
-Total \\
-\midrule
-\endfirsthead
-
-\toprule
-Seguro:	&
-Personal &
-Patronal &
-Total \\
-\midrule
-\endhead
-
-\bottomrule
-\multicolumn{4}{r}{continúa...} \\
-\endfoot
-
-%\bottomrule
-\endlastfoot
-\input{tablas/coescop_tab_tasa.tex}
-\end{longtable}
-}
-
-
-2.2. Con el fin de proteger la economía de los trabajadores de las entidades de seguridad ciudadana y orden público, en el momento de la jubilación, la entidad o entidades donde haya laborado deberán transferir al IESS una reserva matemática, tanto por tiempo faltante para cumplir requisitos, como para cumplir tiempos de aporte, de conformidad con los requisitos exigidos por la \legalcite{ResIESS_CD100} de la jubilación de vejez.
-
-\textbf{3. Prestaciones:}
-
-El pensionista de retiro de vejez se calculará de acuerdo con la siguiente escala: El setenta por ciento (70\%) del sueldo imponible del beneficiario, por veinte (20) años completos de servicio activo y efectivo en la Policía Nacional, más el tres por ciento (3\%) del sueldo imponible por cada año adicional completo de servicio, hasta llegar al máximo del cien por ciento (100\%) del sueldo imponible a quien acredite treinta (30) o más años de servicio, de acuerdo con la siguiente tabla:
+La pensión estará sujeta a la siguiente tabla porcentual y de acuerdo con su
+última remuneración mensual que hubiere percibido:
 
 {\fontsize{10}{10}\selectfont
 \begin{longtable}[H]{C{2cm}R{2.5cm}}
-\caption{Cuantía de la pensión por retiro en porcentajes del sueldo imponible, según el tiempo de servicio}\\
-\label{tab:coescop_tab_coeficientes} \\
+\caption{}\\
+\label{tab:cte_coeficientes} \\
 \toprule
-Tiempo de servicio:
-& Porcentaje del sueldo imponible
+Años de Aportación:
+& Porcentaje de RMU
 \\
 \midrule
 \endfirsthead
@@ -118,9 +71,45 @@ Tiempo de servicio:
 \input{tablas/coescop_tab_coeficientes.tex}
 \end{longtable}
 }
-El beneficio no depende de la edad, sino del tiempo aportado.
-%---------------------------------------------------------------------------------------------------
 
+\textbf{3. Financiamiento:}
+
+A partir de ese momento se iniciará con el aporte personal de su remuneración mensual unificada del
+18,97\% de la RMU como aporte personal. La diferencia de financiamiento por los años de reducción del
+aporte, esto es entre 25 y 30 años y entre requisitos de edad, será reconocido por parte de la Comisión
+de Tránsito del Ecuador, como reserva matemática, valor que será determinado por la unidad
+administrativa correspondiente del IESS, y, será depositado en el Instituto Ecuatoriano de Seguridad
+Social previo a la entrega del beneficio.
+
+{\fontsize{10}{11}\selectfont
+\begin{longtable}[H]{lrrr}
+\caption{Porcentaje de aportación a los trabajadores de la \Sexpr{REP_seg}}\\
+\label{tab:coescop_tab_tasa} \\
+\toprule
+Seguro:	&
+Personal (\%) &
+Patronal (\%) &
+Total (\%)\\
+\midrule
+\endfirsthead
+
+\toprule
+Seguro:	&
+Personal (\%) &
+Patronal (\%) &
+Total (\%)\\
+\midrule
+\endhead
+
+\bottomrule
+\multicolumn{4}{r}{continúa...} \\
+\endfoot
+
+%\bottomrule
+\endlastfoot
+\input{tablas/coescop_tab_tasa.tex}
+\end{longtable}
+}
 
 %--------------------------------------------------------------------------------------------------
 \section{Principales conclusiones y recomendaciones.}
@@ -128,16 +117,27 @@ El beneficio no depende de la edad, sino del tiempo aportado.
 Del presente estudio se obtienen las siguientes conclusiones:
 \begin{enumerate}[itemsep=0mm, topsep=0pt]
 
-\item La creación de una nueva jubilación anticipada para los trabajadores que acrediten un mínimo de veinte (20) años de servicio en las entidades regidas por el COESCOP, con una pensión igual al setenta por ciento (70\%) del sueldo imponible del beneficiario, por veinte (20) años completos de servicio activo, más el tres por ciento (3\%) del sueldo imponible por cada año adicional completo de servicio, hasta llegar al máximo del cien por ciento (100\%) del sueldo imponible a quien acredite treinta (30) o más años de servicio, estaría debidamente financiada en el caso de que se suba la tasa de aportación personal al Seguro de IVM de 11,06\% a 12,90\% a los trabajadores sujetos del COESCOP, y las entidades de seguridad ciudadana y orden público deberán transferir al Fondo del Seguro de IVM del IESS valores por USD \Sexpr{REP$reserva_a_pagar_vap} para completar el financiamiento de pensiones de mayor cuantía y por mayor tiempo y; además, se deberían transferir USD \Sexpr{REP$aporte_ivm_vap} por el cese de pago aportes por diez (10) años al Seguro de IVM del IESS y USD \Sexpr{REP$aporte_salud_vap} de aportes al Seguro General de Salud Individual y Familiar del IESS, al tratarse de una jubilación anticipada que se entregaría el beneficio diez (10) años antes de lo establecido en la jubilación de vejez del IESS.
+\item La \Sexpr{REP_seg} deberá depositar USD \Sexpr{REP$reserva_a_pagar_vap}, en los próximos 25 años, para completar el financiamiento de pensiones anticipadas y con mayor cuantía de la Jubilación Especial de los Servidores Públicos del Cuerpo de Vigilancia de la Comisión de Tránsito del Ecuador, en concordancia al artículo 2 del Proyecto Ley Reformatoria a la Ley de Seguridad Social para la Jubilación Especial para el Cuerpo de Vigilancia de la Comisión de Tránsito del Ecuador.
 
-\item En caso de que la creación de esta nueva prestación no esté debidamente financiada, según como lo establece el artículo 369 de la Constitución, el perjuicio al IESS sería igual a USD \Sexpr{REP$impacto}, de los cuales USD \Sexpr{REP$aporte_ivm_vap} sería en perjuicio al Seguro de IVM; es decir, el déficit actuarial del Fondo del Seguro de IVM (USD 4.551 millones de dólares), crecería en USD \Sexpr{REP$aporte_ivm_vap_millones} millones de dólares por el cese de aportes de 10 años y el pago de prestaciones más altas a pensionistas que se jubilaran con 20 años de servicio. Y, USD \Sexpr{REP$aporte_salud_vap} sería el perjuicio al Seguro de Salud General Individual y Familiar del IESS por el cese de aportes de diez (10) años que dejaría de percibir.
+\item La creación de la Jubilación Especial para el Cuerpo de Vigilancia de la Comisión de Tránsito del Ecuador provocará un perjuicio al IESS igual a USD \Sexpr{REP$impacto}, de los cuales USD \Sexpr{REP$aporte_ivm_vap} sería en perjuicio al Seguro de IVM y USD \Sexpr{REP$aporte_salud_vap} al Seguro de Salud General Individual y Familiar del IESS por el cese de aportes por cinco (5) años que dejaría de percibir estos Seguros.
+
+\item La Asamblea Nacional al aprobar el Proyecto Ley Reformatoria a la Ley de Seguridad Social para la jubilación Especial para el Cuerpo de Vigilancia de la Comisión de Tránsito del Ecuador, inobservó lo siguiente:
+
+\quad a) \, El artículo 287 de la Constitución de la República del Ecuador, que ordena: \textit{``Toda norma que cree una obligación financiada con recursos públicos establecerá la fuente de financiamiento correspondiente (...)''}; y
+
+\quad b) \, El artículo 369 de la Constitución de la República del Ecuador, que ordena: \textit{``(...). La creación de nuevas prestaciones estará debidamente financiada´´}.
+
+\quad c) \, El artículo 2 de Ley Reformatoria a La Ley de Seguridad Social y a la Ley del Banco del Instituto Ecuatoriano de Seguridad Social, publicada en el Registro Oficial N° 605, de fecha 22 de julio de 2024, que establece: \textit{`` (...) Toda nueva prestación sobre la cual el Estado tenga que realizar contribuciones, deberá contarse previamente con el dictamen presupuestario favorable por parte del ente rector de la política pública de economía y finanzas''}.
+
+\quad d) \, El artículo 233 de la Ley de Seguridad Social que establece: \textit{``No se creará prestación alguna ni se mejorarán las existentes a cargo del Seguro Social Obligatorio aplicado por el IESS, si no se encontraren debidamente financiadas y respaldadas en los resultados de estudios actuariales que demuestren su solvencia y sostenibilidad´´}.
+
+\item La Asamblea Nacional justifica la creación de la nueva Jubilación Especial para el Cuerpo de Vigilancia de la Comisión de Tránsito del Ecuador por el alto riesgo de accidentes de trabajo y enfermedades profesionales de sus agentes de tránsito sin ningún estudio de puestos del Trabajo realizado por el Ministerio del Trabajo. Además, que incluye a los servidores con puestos administrativos en la jubilación especial. Y, no toma en cuenta la existencia del Seguro General de Riesgos del Trabajo, al que ya disponen los servidores de la CTE; es decir, realizan una justificación de riesgos del trabajo para obtener una rebaja de 5 años de aporte y una mayor pensión de vejez, contraviniendo el principio de “Equidad” en la entrega de las prestaciones del Seguro General Obligatorio en proporción directa al esfuerzo de los contribuyentes y a la necesidad de amparo de los beneficiarios, en función del bien común, establecidos en el artículo 1 de la Ley de Seguridad Social.
+
 \end{enumerate}
 %--------------------------------------------------------------------------------------------------
 Las principales recomendaciones de esta Dirección son:
 \begin{enumerate}
 \item Se recomienda entregar una jubilación anticipada a los trabajadores sujetos al Código Orgánico de Entidades de Seguridad Ciudadana y Orden Público, siempre y cuando se encuentre debidamente financiada de acuerdo al artículo 369 de la \legalcite{ConsEcu:2008}, amparado en estudios actuariales, en conformidad al artículo 233 de la \legalcite{LeySS} y deberá contar previamente con el dictamen presupuestario favorable por parte del ente rector de la política pública de economía y finanzas, conforme al artículo 2 de la \legalcite{reformaLSS24}.
 
-\item Se recomienda entregar una jubilación anticipada a los trabajadores sujetos al Código Orgánico de Entidades de Seguridad Ciudadana y Orden Público que hayan alcanzado un mínimo de veinte (20) años de servicio activo en las entidades regidas por el COESCOP, con una pensión igual al setenta por ciento (70\%) del sueldo imponible del beneficiario, por veinte (20) años completos de servicio activo, más el tres por ciento (3\%) del sueldo imponible por cada año adicional completo de servicio, hasta llegar al máximo del cien por ciento (100\%) del sueldo imponible a quien acredite treinta (30) o más años de servicio, siempre y cuando, se eleve su tasa de aportación personal al Seguro de IVM a 12,90\% a los trabajadores sujetos del COESCOP y las entidades sujetas al Código Orgánico de Entidades de Seguridad Ciudadana y Orden Público transfieran durante los próximos 20 años el valor de USD \Sexpr{REP$reserva_a_pagar_vap} al Fondo del Seguro de IVM para el pago de jubilaciones más altas y por más tiempo; y, además, se deberían transferir USD \Sexpr{REP$aporte_ivm_vap} por el cese de pago aportes por diez (10) años al Seguro de IVM del IESS y USD \Sexpr{REP$aporte_salud_vap} de aportes al Seguro General de Salud Individual y Familiar del IESS, al tratarse de una jubilación anticipada que se entregaría el beneficio diez (10) años antes de lo establecido en la jubilación de vejez del IESS.
-
-\item	En el caso que hubiera el debido financiamiento para la entrega de esta prestación, se recomienda crear un nuevo Fondo, formado exclusivamente con los valores recaudados por esta jubilación reducida, el cual poseerá su propia contabilidad, gastos administrativos y portafolio de inversiones. Y, para la entrega de esta prestación, se recomienda el cálculo de la reserva matemática por la diferencia de 20 a 30 años de aportes y la diferencia de edad entre la edad de derecho y los 60 años.
+\item	En el caso que hubiera el debido financiamiento para la entrega de esta prestación, se recomienda crear un nuevo Fondo, formado exclusivamente con los valores recaudados por esta jubilación reducida, el cual poseerá su propia contabilidad, gastos administrativos y portafolio de inversiones. Y, para la entrega de esta prestación, se recomienda el cálculo de la reserva matemática por la diferencia de 25 a 30 años de aportes y la diferencia de edad entre la edad de derecho y los 60 años.
 \end{enumerate}

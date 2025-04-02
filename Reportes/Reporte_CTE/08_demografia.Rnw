@@ -3,40 +3,22 @@
 \label{chp_demog}
 %--------------------------------------------------------------------------------------------------
 
- A continuación, presentamos un análisis tabular y gráfico de las principales variables demográficas servidores de la Comisión de Tránsito del Ecuador.
+ A continuación, presentamos un análisis demográfico de los servidores de la \Sexpr{REP_seg}.
 
-% %---------------------------------------------------------------------------------------------------
-\subsection{Comisión de Tránsito del Ecuador}
-\label{chp_demog:cte}
-
-%---------------------------------------------------------------------------------------------------
-Para el presente estudio se considera el número de servidores públicos de la Comisión de Tránsito del Ecuador (CTE) a marzo del 2022, que es de 5.107 servidores. En la figura \ref{fig:iess_pir_cte} y tabla \ref{tab:iess_cte_edad_sexo} se muestra la distribución por edad y sexo de las y los servidores públicos de la mencionada entidad. En ellas se visualiza que el 10,41\% del personal son mujeres y el 89,59\% son hombres. Además, el 47,09\% de la población total de empleados de esta entidad tiene entre 30 y 40 años.
+Para el presente estudio se considera el número de servidores públicos de la \Sexpr{REP_seg} (CTE) a 31 de dicicembre de 2024, que es de \Sexpr{REP$dem_n} servidores, de los cuales \Sexpr{REP$dem_n_m} ( \Sexpr{REP$dem_n_porc_m}\% ) son hombres y \Sexpr{REP$dem_n_f} ( \Sexpr{REP$dem_n_porc_f}\% ) son mujeres. Además, el \Sexpr{REP$dem_n_dist_porc_max}\% de los servidores; es decir, \Sexpr{REP$dem_n_dist_max} tienen edades entre 30 y 40 años. La edad promedio es \Sexpr{REP$dem_edad_m} años en los hombres y \Sexpr{REP$dem_edad_f} años en las mujeres. Y, al al 31 de diciembre de 2024, se registran \Sexpr{REP$dem_n_der_max} servidores de la CTE, mayores de 60 años, que podrían acceder al régimen actual de jubilación de vejez del IESS. En la figura \ref{fig:iess_pir_cte} y tabla \ref{tab:iess_rangos_edad_cargos_cte} se muestra la distribución por edad y sexo de las y los servidores públicos de la mencionada entidad.
 
 \begin{figure}[H]
 \centering
 \captionsetup{justification=centering}
 \caption{Distribución por edad y sexo del personal de la CTE}
 \label{fig:iess_pir_cte}
-\includegraphics[scale=1]{graficos/iess_pir_cte.pdf}
-\caption*{\scriptsize {\bf Fuente:} Comisión de Tránsito del Ecuador \\
+\includegraphics[scale=0.9]{graficos/iess_pir_cte.pdf}
+\caption*{\scriptsize {\bf Fuente:} \Sexpr{REP_seg} \\
 {\bf Elaborado:} DAIE}
 \end{figure}
-
-
-\begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\caption{Distribución por cargo del personal de la CTE}
-\label{fig:iess_bar_cte}
-\includegraphics[scale=1]{graficos/iess_bar_cte.pdf}
-\caption*{\scriptsize {\bf Fuente:} Comisión de Tránsito del Ecuador \\
-{\bf Elaborado:} DAIE}
-\end{figure}
-
-La figura \ref{fig:iess_bar_cte} detalla la distribución por cargo de las y los servidores públicos de la Comisión de Tránsito del Ecuador e indica que el cargo que concentra la mayor cantidad de trabajadores es \textit{Agente de Tránsito 3} con un total de 668; seguidamente se encuentra el cargo \textit{Administrativo} con 220 servidores. En cambio, los cargos con menor cantidad de servidores son \textit{Prefecto} y \textit{Prefecto Jefe}, con 13 y 27 servidores respectivamente.
 
 {\setlength{\tabcolsep}{3pt}
-{\fontsize{11}{13}\selectfont
+{\fontsize{11}{12}\selectfont
 \begin{longtable}[H]{crrrrrr}
   \caption{Servidores de la \Sexpr{REP_seg} por rango edad y sexo}
 \label{tab:iess_rangos_edad_cargos_cte} \\
@@ -85,11 +67,23 @@ Elaborado: DAIE}
 
 
 
+En la \Sexpr{REP_seg}, se registra un total de \Sexpr{REP$dem_n} servidores, de los cuales por puesto institucionales se distribuyen de la siguiente manera: 453 (7,59\%) con puestos administrativos; 1.157 (19,38\%) servidores con puesto Agente 4; 2.241 (37,53\%) con puesto Agente 3; 952 (15,94\%) servidores con puesto Agente 2; 211 (3,53\%) servidores con puesto Agente 1; 432 (7,23\%) servidores como Sub-inspector II; 176 (2,95\%) servidores como Sub-inspector I; 139 (2,33\%) servidores con puesto de Inspector; 68 (1,14\%) servidores con puesto de Sub-prefecto; 72 (1,21\%) servidores con puesto de Prefecto; 65 (1,09\%) servidores con puesto de Prefecto jefe; y, 5 (0,08\%) servidores con puesto de Prefecto Comandante. En la figura \ref{fig:iess_bar_cte} y tabla \ref{tab:iess_cargo_sexo_cte} se detalla la distribución por cargo de las y los servidores públicos de la \Sexpr{REP_seg}.
+
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\caption{Distribución por cargo del personal de la CTE}
+\label{fig:iess_bar_cte}
+\includegraphics[scale=1]{graficos/iess_bar_cte.pdf}
+\caption*{\scriptsize {\bf Fuente:} Comisión de Tránsito del Ecuador \\
+{\bf Elaborado:} DAIE}
+\end{figure}
+
 {\setlength{\tabcolsep}{2pt}
 {\fontsize{10}{13}\selectfont
 \begin{longtable}[H]{lrrrrrr}
   \caption{Servidores de la \Sexpr{REP_seg} por cargo y sexo}
-\label{tab:iess_rangos_edad_cargos_cte} \\
+\label{tab:iess_cargo_sexo_cte} \\
 \toprule
  \multicolumn{1}{l}{\multirow{2}{*}{Rango de edad:}} & 
 \multicolumn{2}{c}{Mujeres} &
@@ -133,10 +127,10 @@ Elaborado: DAIE}
 }
 }
 
-
+El salario promedio de los servidores de la \Sexpr{REP_seg} es USD \Sexpr{REP$dem_sal_m} para los hombres y USD \Sexpr{REP$dem_sal_f} para las mujeres. Por puesto institucional, la remuneración mensual: USD 882,76 para los servidores con puestos Administrativos, en promedio; USD 948,08 para el puesto Agente 4; USD 1.091,33 para el puesto de Agente 3; USD 1.206,59 para el puesto Agente 2; USD 1.501,47 para el puesto Agente 1; USD 1.991,09 para el puesto Sub-inspector II; USD 2.520,00 para el puesto de Sub-inspector I; USD 1.810,00 para el puesto de Inspector; USD 2.525,04 para el puesto de Sub-prefecto; USD 3.064,57 para el puesto de Prefecto; USD 4.807,25 para el puesto de Prefecto en jefe; y, USD 5.011,00 para el puesto de Prefecto Comandante.
 
 {\setlength{\tabcolsep}{2pt}
-{\fontsize{11}{13}\selectfont
+{\fontsize{11}{15}\selectfont
 \begin{longtable}[H]{lr}
   \caption{Remuneraciones promedio por puesto institucional en la \Sexpr{REP_seg}}
 \label{tab:iess_salario_cte} \\
@@ -166,6 +160,8 @@ Elaborado: DAIE}
 \end{longtable}
 }
 }
+
+Se registran 509 servidores de la CTE que registran más de 30 años de aportes; lo que representa el 8,62\% de los servidores. Y, existen 296 servidores con menos de 30 años de aportes y más de 25 años; es decir, a la fecha de corte se podrían jubilarse 805 servidores de la CTE por su jubilación especial; es decir, el 13,48\%. En promedio, 307 servidores entraron a la CTE; mientras que 205 salieron cada año, en promedio. En la tabla \ref{tab:iess_imp_sexo_cte}, se presentan el número de servidores de la CTE por imposiciones; y, en la tabla \ref{tab:iess_avisos_cte}, se presenta el registro de entradas y salidas de servidores de la CTE.
 
 {\setlength{\tabcolsep}{2pt}
 {\fontsize{10}{13}\selectfont

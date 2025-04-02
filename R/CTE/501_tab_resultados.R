@@ -4,11 +4,11 @@ message( paste( rep( '-', 100 ), collapse = '' ) )
 message( '\tCreación de las tablas de los resultados y balance actuarial' )
 
 #Carga de función tildes a latex--------------------------------------------------------------------
-source( 'R/503_tildes_a_latex.R', encoding = 'UTF-8', echo = FALSE )
+source( 'R/500_tildes_a_latex.R', encoding = 'UTF-8', echo = FALSE )
 
 #Carga de datos-------------------------------------------------------------------------------------
 load( paste0( parametros$RData, "IESS_balance.RData" ) )
-load( file = paste0( parametros$RData, 'IESS_macro_estudio.RData' ) )
+load( file = paste0( parametros$RData_macro, 'IESS_macro_estudio.RData' ) )
 load( file = paste0( parametros$RData, 'COESCOP_esquema_pensional.RData' ) )
 
 #Tabla del impacto al IVM y Salud-------------------------------------------------------------------
@@ -122,7 +122,7 @@ print( aux_xtable,
 message( '\tGenerando tablas de la evolución de las hipótesis macroeconómicas' )
 
 var_nom <- c( 'Tasa variaci\\\'{o}n PIB',
-       'Tasa activa referencial',
+       #'Tasa activa referencial',
        'Tasa pasiva referencial', 
        'Tasa actuarial',
        'Tasa variaci\\\'{o}n salarial', 
@@ -130,19 +130,17 @@ var_nom <- c( 'Tasa variaci\\\'{o}n PIB',
        'Tasa inflaci\\\'{o}n' )
 aux <- 
  data.table( nom = var_nom,
-       val = c( paste0( formatC( Hipotesis$tasas[1], decimal.mark = ",", format = 'f',
+       val = c( paste0( formatC( hipotesis$tasas[1], decimal.mark = ",", format = 'f',
                    digits = 3 ), "\\%" ),
-            paste0( formatC( Hipotesis$tasas[2], decimal.mark = ",", format = 'f',
-                   digits = 3 ), "\\%" ),
-            paste0( formatC( Hipotesis$tasas[3], decimal.mark = ",", format = 'f',
+            paste0( formatC( hipotesis$tasas[2], decimal.mark = ",", format = 'f',
                    digits = 3 ), "\\%" ),
             paste0( formatC( 0.0625*100, decimal.mark = ",", format = 'f',
                    digits = 3 ), "\\%" ),
-            paste0( formatC( Hipotesis$tasas[4], decimal.mark = ",", format = 'f',
+            paste0( formatC( hipotesis$tasas[3], decimal.mark = ",", format = 'f',
                    digits = 3 ), "\\%" ),
-            paste0( formatC( Hipotesis$tasas[5], decimal.mark = ",", format = 'f',
+            paste0( formatC( hipotesis$tasas[4], decimal.mark = ",", format = 'f',
                    digits = 3 ), "\\%" ),
-            paste0( formatC( Hipotesis$tasas[6], decimal.mark = ",", format = 'f',
+            paste0( formatC( hipotesis$tasas[5], decimal.mark = ",", format = 'f',
                    digits = 3 ), "\\%" ) 
         ) )
 xtb_aux <- xtable( aux, digits = c( 0, 0, 3 ) )
@@ -157,7 +155,10 @@ print( xtb_aux,
 
 #Tabla de la tasa de aportación---------------------------------------------------------------------
 
-aux <- tab_tasa
+aux <- tab_tasa %>% 
+  mutate( personal = 100 * personal,
+          patronal = 100 * patronal,
+          total = 100 * total )
 
 aux_xtable <- xtable( aux, digits = c( 0, 0, rep( 0, 3 ) ) )
 
@@ -192,124 +193,6 @@ print( aux_xtable,
   only.contents = TRUE,
   hline.after = c( nrow( aux ) ),
     sanitize.text.function = identity )
-
-#Tabla de reservas matemáticas de los agentes de tránsito-------------------------------------------
-
-aux <- balance_transito_corriente %>% 
-  mutate( anio = as.character( anio ) )
-
-aux_xtable <- xtable( aux, digits = c( 0, rep( 2, ncol( aux ) ) ) )
-
-aux_xtable <- tildes_a_latex( aux_xtable )
-
-print( aux_xtable,
-    file = paste0( parametros$resultado_tablas, 'coescop_tab_reservas_transito', '.tex' ),
-    type = 'latex',
-    include.colnames = FALSE,
-    include.rownames = FALSE,
-    format.args = list( decimal.mark = ',', big.mark = '.' ),
-    only.contents = TRUE,
-    hline.after = c( nrow( aux ) ),
-    sanitize.text.function = identity )
-
-
-#Tabla resumen de reservas matemáticas de los agentes de tránsito por ciudad------------------------
-
-aux <- valor_transferir_transito_vap
-
-aux_xtable <- xtable( aux, digits = c( 0, rep( 2, ncol( aux ) ) ) )
-
-aux_xtable <- tildes_a_latex( aux_xtable )
-
-print( aux_xtable,
-    file = paste0( parametros$resultado_tablas, 'coescop_tab_transito_resumen', '.tex' ),
-    type = 'latex',
-    include.colnames = FALSE,
-    include.rownames = FALSE,
-    format.args = list( decimal.mark = ',', big.mark = '.' ),
-    only.contents = TRUE,
-    hline.after = c( nrow( aux ) - 1,
-             nrow( aux ) ),
-    sanitize.text.function = identity )
-
-#Tabla de reservas matemáticas de los agentes de control--------------------------------------------
-
-aux <- balance_control_corriente %>% 
-  mutate( anio = as.character( anio ) )
-
-aux_xtable <- xtable( aux, digits = c( 0, rep( 2, ncol( aux ) ) ) )
-
-aux_xtable <- tildes_a_latex( aux_xtable )
-
-print( aux_xtable,
-       file = paste0( parametros$resultado_tablas, 'coescop_tab_reservas_control', '.tex' ),
-       type = 'latex',
-       include.colnames = FALSE,
-       include.rownames = FALSE,
-       format.args = list( decimal.mark = ',', big.mark = '.' ),
-       only.contents = TRUE,
-       hline.after = c( nrow( aux ) ),
-       sanitize.text.function = identity )
-
-
-#Tabla resumen de reservas matemáticas de los agentes de control por ciudad-------------------------
-
-aux <- valor_transferir_control_vap
-
-aux_xtable <- xtable( aux, digits = c( 0, rep( 2, ncol( aux ) ) ) )
-
-aux_xtable <- tildes_a_latex( aux_xtable )
-
-print( aux_xtable,
-       file = paste0( parametros$resultado_tablas, 'coescop_tab_control_resumen', '.tex' ),
-       type = 'latex',
-       include.colnames = FALSE,
-       include.rownames = FALSE,
-       format.args = list( decimal.mark = ',', big.mark = '.' ),
-       only.contents = TRUE,
-       hline.after = c( nrow( aux ) - 1,
-                        nrow( aux ) ),
-       sanitize.text.function = identity )
-
-
-#Tabla de reservas matemáticas de los bomberos------------------------------------------------------
-
-aux <- balance_bombero_corriente %>% 
-  mutate( anio = as.character( anio ) )
-
-aux_xtable <- xtable( aux, digits = c( 0, rep( 2, ncol( aux ) ) ) )
-
-aux_xtable <- tildes_a_latex( aux_xtable )
-
-print( aux_xtable,
-       file = paste0( parametros$resultado_tablas, 'coescop_tab_reservas_bombero', '.tex' ),
-       type = 'latex',
-       include.colnames = FALSE,
-       include.rownames = FALSE,
-       format.args = list( decimal.mark = ',', big.mark = '.' ),
-       only.contents = TRUE,
-       hline.after = c( nrow( aux ) ),
-       sanitize.text.function = identity )
-
-
-#Tabla resumen de reservas matemáticas de los bomberos----------------------------------------------
-
-aux <- valor_transferir_bombero_vap
-
-aux_xtable <- xtable( aux, digits = c( 0, rep( 2, ncol( aux ) ) ) )
-
-aux_xtable <- tildes_a_latex( aux_xtable )
-
-print( aux_xtable,
-       file = paste0( parametros$resultado_tablas, 'coescop_tab_bombero_resumen', '.tex' ),
-       type = 'latex',
-       include.colnames = FALSE,
-       include.rownames = FALSE,
-       format.args = list( decimal.mark = ',', big.mark = '.' ),
-       only.contents = TRUE,
-       hline.after = c( nrow( aux ) - 1,
-                        nrow( aux ) ),
-       sanitize.text.function = identity )
 
 #Limpiando memoria RAM------------------------------------------------------------------------------
 message( paste( rep( '-', 100 ), collapse = '' ) )

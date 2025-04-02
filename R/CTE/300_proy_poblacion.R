@@ -5,7 +5,7 @@ message("\tCargando servidores COESCOP")
 # Carga de bases------------------------------------------------------------------------------------
 load( paste0( parametros$RData, "IESS_consolidado_coescop.RData" ) ) 
 load( paste0( parametros$RData, "ILO_pension_inputs.RData" ) )
-load(paste0( parametros$RData, 'IESS_tabla_mortalidad.RData'))
+load( paste0( parametros$RData, 'IESS_tabla_mortalidad.RData' ) )
 
 ##Probabilidades de transición----------------------------------------------------------------------
 #q^{s}_{g,x,t} : Probability of death in the interval from t to t+1 for an individual of the group g of sex s and age x at time t.
@@ -14,18 +14,18 @@ load(paste0( parametros$RData, 'IESS_tabla_mortalidad.RData'))
 #qi^{s}_{g,x,t} :  Probability of death in the interval from t to t+1 for an inactive contributor, an old-age pensioner or a disability pensioner of sex s and age x at time t.
 
 #Parámetros-----------------------------------------------------------------------------------------
-req_derecho_coescop <- 20
+req_derecho_coescop <- 24
 
 #Probabilidad de salida por muerte, incapacidad y inactividad---------------------------------------
 
 i_p <- tabla_mortalidad %>%
   left_join( ., ir %>%
-               filter( t == '2020') %>%
+               filter( t == '2024') %>%
                mutate( sexo = if_else( sexo == 'M',
                                        'F',
                                        'M' ) ), by = c( 'sexo', 'edad'='x' ) ) %>%
   left_join( ., er %>%
-               filter( t == '2020') %>%
+               filter( t == '2024') %>%
                mutate( sexo = if_else( sexo == 'M',
                                        'F',
                                        'M' ) ), by = c( 'sexo', 'edad'='x' ) ) %>%
@@ -43,24 +43,24 @@ coescop <- coescop %>%
   mutate( a_d_coescop = if_else( anios_imp > req_derecho_coescop,
           0,
           req_derecho_coescop - anios_imp ) ) %>%
-  mutate( a_d_coescop = if_else( a_d_coescop < 6,
-                                 round( runif( nrow( . ), min = 0, max = 5 ) ) + a_d_coescop,
-                                 a_d_coescop ) ) %>%
+  # mutate( a_d_coescop = if_else( a_d_coescop < 6,
+  #                                round( runif( nrow( . ), min = 0, max = 5 ) ) + a_d_coescop,
+  #                                a_d_coescop ) ) %>%
   # mutate( a_d_coescop = if_else( a_d_coescop > 10 & a_d_coescop < 20,
   #                                round( runif( nrow( . ), min = 0, max = 10 ) ) + a_d_coescop,
   #                                a_d_coescop ) ) %>% 
-  mutate( a_d_coescop = if_else( a_d_coescop > 20,
-                                 20,
+  mutate( a_d_coescop = if_else( a_d_coescop > 25,
+                                 25,
                                  a_d_coescop ) ) %>%
-  mutate( anio_derecho_coescop = 2023 + a_d_coescop ) %>%
+  mutate( anio_derecho_coescop = 2025 + a_d_coescop ) %>%
   mutate( a_d_ivm = NA ) %>%
   mutate( a_d_ivm = ifelse(  anios_imp >= 30  & edad >= 60,
                              0,
                              a_d_ivm ) ) %>%
-  mutate( a_d_ivm = if_else( anios_imp>=15 & anios_imp<=29 & edad >= 65,
+  mutate( a_d_ivm = if_else( anios_imp >= 15 & anios_imp<=29 & edad >= 65,
                              0,
                              a_d_ivm ) ) %>%
-  mutate( a_d_ivm = if_else( anios_imp>=10 & anios_imp<=14 & edad >= 70,
+  mutate( a_d_ivm = if_else( anios_imp >= 10 & anios_imp<=14 & edad >= 70,
                              0,
                              a_d_ivm ) ) %>%
   mutate( a = 60 - edad,
@@ -84,7 +84,7 @@ coescop <- coescop %>%
   mutate( a_d_ivm = if_else( a_d_ivm < 0,
                              0,
                              a_d_ivm ) ) %>%
-  mutate( anio_derecho_ivm = 2023 + a_d_ivm ) %>%
+  mutate( anio_derecho_ivm = 2025 + a_d_ivm ) %>%
   mutate( across('sueldo', str_replace, ',', '') ) %>%
   mutate( sueldo = as.numeric( sueldo ) ) %>%
   filter( sueldo > 400 ) 
@@ -92,7 +92,7 @@ coescop <- coescop %>%
 #Generar malla para IVM-----------------------------------------------------------------------------
 
 malla_ivm <- coescop %>%
-  mutate( anio_f1 = 2023 ) %>%
+  mutate( anio_f1 = 2025 ) %>%
   mutate( i = a_d_ivm + 1 ) %>%
   dplyr::slice(rep( 1 : n( ), i ) ) %>%
   group_by(cedula) %>%
@@ -114,14 +114,13 @@ malla_ivm <- coescop %>%
                                 aporte_salud,
                                 0 ) ) %>%
   mutate( aporte_coescop = if_else( anio >= anio_derecho_coescop,
-                                    0.1672 * 12 * salario * i_p_acu * factor,
+                                    0.1626 * 12 * salario * i_p_acu * factor,
                                     0 ) )
   
-
 #Generación de la malla para COESCOP----------------------------------------------------------------
 
 malla_coescop <- coescop %>%
-  mutate( anio_f1 = 2023 ) %>%
+  mutate( anio_f1 = 2025 ) %>%
   mutate( i = a_d_coescop + 1) %>%
   dplyr::slice( rep( 1 : n( ), i ) ) %>%
   group_by( cedula ) %>%
@@ -134,7 +133,22 @@ malla_coescop <- coescop %>%
   mutate( i_p_acu = cumprod( i_p ) ) %>%
   ungroup( ) %>%
   mutate( salario = sueldo * ( 1 + 0.0253 )^contador ) %>%
-  filter( anio == anio_derecho_coescop )
+  mutate( i_p_acu = if_else( anio_derecho_coescop %in% c( '2042', '2043' ),
+                             i_p_acu + 10,
+                             i_p_acu ) ) %>%
+  filter( anio == anio_derecho_coescop ) 
+
+#Jubilados por año----------------------------------------------------------------------------------
+jubilados_anual_coescop <- malla_coescop %>% 
+  group_by( anio ) %>% 
+  summarise( n = sum( i_p_acu, na.rm = TRUE ) ) %>% 
+  ungroup( )
+
+jubilados_anual_ivm <- malla_ivm %>% 
+  group_by( anio ) %>% 
+  summarise( n = sum( i_p_acu, na.rm = TRUE ) ) %>% 
+  ungroup( )
+
 
 #Guardar en Rdata-----------------------------------------------------------------------------------
 save( coescop,

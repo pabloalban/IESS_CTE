@@ -40,21 +40,21 @@
 <<cap01, child='01_cobertura.Rnw'>>=
 @
 
-% <<cap02, child='02_contenido.Rnw'>>=
-% @
-% 
+<<cap02, child='02_contenido.Rnw'>>=
+@
+ 
 % %---------------------------------------------------------------------------------------------------
 % % Cuerpo del estudio
 % %\mainmatter
 % 
-% <<cap03, child='03_resumen_ejecutivo.Rnw'>>=
-% @
-%   
-% <<cap04, child='04_introduccion.Rnw'>>=
-% @
-% 
-% <<cap05, child='05_reglamentacion.Rnw'>>=
-% @
+<<cap03, child='03_resumen_ejecutivo.Rnw'>>=
+@
+   
+<<cap04, child='04_introduccion.Rnw'>>=
+@
+ 
+<<cap05, child='05_reglamentacion.Rnw'>>=
+@
 %  
 <<cap06, child='06_analisis_contexto.Rnw'>>=
 @
@@ -64,18 +64,18 @@
 % 
 <<cap08, child='08_demografia.Rnw'>>=
 @
-%   
-% <<cap10, child='10_hipotesis.Rnw'>>=
-% @ 
+  
+<<cap10, child='10_hipotesis.Rnw'>>=
+@ 
 % 
-% <<cap11, child='12_situacion.Rnw'>>=
-% @
+<<cap11, child='12_situacion.Rnw'>>=
+@
 % 
-% <<cap12, child='14_conclusion.Rnw'>>=
-% @
+<<cap12, child='14_conclusion.Rnw'>>=
+@
 
-% <<cap15, child='15_opinion_actuarial.Rnw'>>=
-% @
+<<cap15, child='15_opinion_actuarial.Rnw'>>=
+@
 
 %---------------------------------------------------------------------------------------------------
 % Apéndices

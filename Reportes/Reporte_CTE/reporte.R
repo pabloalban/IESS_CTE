@@ -29,7 +29,7 @@ REP_bib_lib <- 'bibliografia_libros.bib'
 REP_bib_art <- 'bibliografia_articulos.bib'
 REP_bib_ley <- 'bibliografia_leyes.bib'
 
-REP_tit <- 'Estudio Actuarial Jubilación Especial de las y los Servidores Públicos del Cuerpo de Vigilancia la Comisión de Tránsito del Ecuador'
+REP_tit <- 'Estudio Actuarial de la Jubilación Especial de las y los Servidores Públicos del Cuerpo de Vigilancia la Comisión de Tránsito del Ecuador'
 REP_seg <- c('CTE' = 'Comisión de Tránsito del Ecuador')
 
 paste( 'Seguro', parametros$seguro )

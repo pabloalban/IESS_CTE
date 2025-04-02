@@ -97,8 +97,7 @@ print(
   include.rownames = FALSE,
   format.args = list( decimal.mark = ',', big.mark = '.' ),
   only.contents = TRUE,
-  hline.after = c( nrow( aux ),
-                   nrow( aux ) - 1 ),
+  hline.after = c( nrow( aux ) ),
   sanitize.text.function = identity
 )
 

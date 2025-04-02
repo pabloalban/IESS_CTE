@@ -262,7 +262,7 @@ cte_servidores <- cte_servidores %>%
                  -impo_2023 ) %>% 
   filter( !is.na( cargo_coescop ) ) %>% 
   mutate( imp = if_else( is.na( imp ),
-                         12,
+                         1,
                          imp ) )
 
 # Guardar los data.frames en un Rdata---------------------------------------------------------------

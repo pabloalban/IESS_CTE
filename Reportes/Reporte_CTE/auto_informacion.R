@@ -1,9 +1,9 @@
 message( paste( rep( '-', 100 ), collapse = '' ) )
 message( '\tEstableciendo información para la configuración del reporte' )
 # Carga de información------------------------------------------------------------------------------
-# load(paste0(parametros$RData, "IESS_balance.RData"))
-# load( file = paste0( parametros$RData, 'IESS_macro_estudio.RData' ) )
-# load( file = paste0( parametros$RData, 'COESCOP_esquema_pensional.RData' ) )
+load(paste0(parametros$RData, "IESS_balance.RData"))
+load( file = paste0( parametros$RData_macro, 'IESS_macro_estudio.RData' ) )
+load( file = paste0( parametros$RData, 'COESCOP_esquema_pensional.RData' ) )
 # load( file = paste0( parametros$RData, 'IESS_tablas_contingencia_2.RData' ) )
 # load( paste0( parametros$RData, 'COESCOP_transito.RData' ) ) #trásito
 # load( paste0( parametros$RData, 'COESCOP_control.RData' ) ) #control
@@ -282,7 +282,9 @@ REP$macro_roe_int_pub_2020 <- format(
   nsmall = 2, digits = 2, big.mark = '.', decimal.mark = ',', format = 'f' )
 
 #Demografía de los agentes de la CTE----------------------------------------------------------------
-
+REP$dem_n <- format( sum( tabla_prom$n ), 
+                     nsmall = 2, digits = 2, big.mark = '.', decimal.mark = ',', format = 'f' )
+  
 REP$dem_n_m <- format( filter(tabla_prom, sexo == 'M' )$n, 
   nsmall = 2, digits = 2, big.mark = '.', decimal.mark = ',', format = 'f' )
   
@@ -313,10 +315,10 @@ REP$dem_n_dist_max <- format( max( tabla_rangos_edad_cargos$total[ -nrow( tabla_
 REP$dem_n_dist_porc_max <- format( max( tabla_rangos_edad_cargos$por_total[ -nrow( tabla_rangos_edad_cargos ) ] ),
                               nsmall = 2, digits = 2, big.mark = '.', decimal.mark = ',', format = 'f' )
 
-REP$dem_n_der_max <- format( filter( tabla_rangos_edad_cargos, rango_edad == '[ 60 - 70 ]' )$total,
+REP$dem_n_der_max <- format( filter( tabla_rangos_edad_cargos, rango_edad == '( 60 - 70 ]' )$total,
                               nsmall = 0, digits = 2, big.mark = '.', decimal.mark = ',', format = 'f' )
 
-REP$dem_n_der_porc_max <- format( filter( tabla_rangos_edad_cargos, rango_edad == '[ 60 - 70 ]' )$por_total,
+REP$dem_n_der_porc_max <- format( filter( tabla_rangos_edad_cargos, rango_edad == '( 60 - 70 ]' )$por_total,
                                   nsmall = 2, digits = 2, big.mark = '.', decimal.mark = ',', format = 'f' )
 
 # # Demografía de los agentes de Control--------------------------------------------------------------
@@ -491,63 +493,63 @@ REP$dem_n_der_porc_max <- format( filter( tabla_rangos_edad_cargos, rango_edad =
 #   eval( eval( parse( text = expr ) ), envir = .GlobalEnv )
 # }
 # 
-# # Escenario único-----------------------------------------------------------------------------------
-# balance_anual <- as.data.table(balance_anual)
-# 
-# REP$bal_act_esc_1 <- format( balance_anual[  anio == parametros$anio_fin  ]$V,
-#                              digits = 2, nsmall = 2, big.mark = '.',
-#                              decimal.mark = ',', format = 'f' )
-# 
-# REP$bal_cap_esc_1 <- format( balance_anual[ anio == parametros$horizonte ]$V_cap,
-#                              digits = 2, nsmall = 2, big.mark = '.',
-#                              decimal.mark = ',', format = 'f' )
-# 
-# 
-# REP$aporte_coescop_vap <- format( balance_anual[  anio == parametros$anio_fin  ]$aporte_coescop_vap,
-#                               digits = 2, nsmall = 2, big.mark = '.', 
-#                               decimal.mark = ',', format = 'f' )
-#  
-# REP$reserva_a_pagar_vap <- format( balance_anual[  anio == parametros$anio_fin  ]$reserva_a_pagar_vap,
-#                                    digits = 2, nsmall = 2, big.mark = '.', 
-#                                    decimal.mark = ',', format = 'f' )
-# 
-# REP$reserva_matematica_vap  <- format( balance_anual[  anio == parametros$anio_fin  ]$reserva_matematica_vap ,
-#                                    digits = 2, nsmall = 2, big.mark = '.', 
-#                                    decimal.mark = ',', format = 'f' )
-# 
-# 
-# REP$montepio_vap <- format( balance_anual[  anio == parametros$anio_fin  ]$montepio_vap,
-#                                    digits = 2, nsmall = 2, big.mark = '.', 
-#                                    decimal.mark = ',', format = 'f' )
-# 
-# 
-# REP$gastos_administrativos_vap <- format( balance_anual[  anio == parametros$anio_fin  ]$gastos_administrativos_vap,
-#                                    digits = 2, nsmall = 2, big.mark = '.', 
-#                                    decimal.mark = ',', format = 'f' )
-# 
-# 
-# REP$egreso_total_vap  <- format( balance_anual[  anio == parametros$anio_fin  ]$egreso_total_vap,
-#                                           digits = 2, nsmall = 2, big.mark = '.', 
-#                                           decimal.mark = ',', format = 'f' )
-# 
-# #Balance corriente----------------------------------------------------------------------------------
-# 
-# #Impacto--------------------------------------------------------------------------------------------
-# impacto <- as.data.table( impacto )
-# 
-# REP$impacto  <- format( impacto[  anio == parametros$anio_fin  ]$total_vap,
-#                                  digits = 2, nsmall = 2, big.mark = '.', 
-#                                  decimal.mark = ',', format = 'f' )
-# 
-# REP$aporte_ivm_vap <- format( impacto[  anio == parametros$anio_fin  ]$aporte_ivm_vap  ,
-#                         digits = 2, nsmall = 2, big.mark = '.', 
-#                         decimal.mark = ',', format = 'f' )
-# 
-# REP$aporte_ivm_vap_millones <- format( round( impacto[  anio == parametros$anio_fin  ]$aporte_ivm_vap / 1000000, 2 ),
-#                               digits = 2, nsmall = 2, big.mark = '.', 
-#                               decimal.mark = ',', format = 'f' )
-# 
-# REP$aporte_salud_vap <- format( impacto[  anio == parametros$anio_fin  ]$aporte_salud_vap  ,
-#                                  digits = 2, nsmall = 2, big.mark = '.', 
-#                                  decimal.mark = ',', format = 'f' )
-# 
+# Escenario único-----------------------------------------------------------------------------------
+balance_anual <- as.data.table(balance_anual)
+
+REP$bal_act_esc_1 <- format( balance_anual[  anio == parametros$anio_fin  ]$V,
+                             digits = 2, nsmall = 2, big.mark = '.',
+                             decimal.mark = ',', format = 'f' )
+
+REP$bal_cap_esc_1 <- format( balance_anual[ anio == parametros$horizonte ]$V_cap,
+                             digits = 2, nsmall = 2, big.mark = '.',
+                             decimal.mark = ',', format = 'f' )
+
+
+REP$aporte_coescop_vap <- format( balance_anual[  anio == parametros$anio_fin  ]$aporte_coescop_vap,
+                              digits = 2, nsmall = 2, big.mark = '.',
+                              decimal.mark = ',', format = 'f' )
+
+REP$reserva_a_pagar_vap <- format( balance_anual[  anio == parametros$anio_fin  ]$reserva_a_pagar_vap,
+                                   digits = 2, nsmall = 2, big.mark = '.',
+                                   decimal.mark = ',', format = 'f' )
+
+REP$reserva_matematica_vap  <- format( balance_anual[  anio == parametros$anio_fin  ]$reserva_matematica_vap ,
+                                   digits = 2, nsmall = 2, big.mark = '.',
+                                   decimal.mark = ',', format = 'f' )
+
+
+REP$montepio_vap <- format( balance_anual[  anio == parametros$anio_fin  ]$montepio_vap,
+                                   digits = 2, nsmall = 2, big.mark = '.',
+                                   decimal.mark = ',', format = 'f' )
+
+
+REP$gastos_administrativos_vap <- format( balance_anual[  anio == parametros$anio_fin  ]$gastos_administrativos_vap,
+                                   digits = 2, nsmall = 2, big.mark = '.',
+                                   decimal.mark = ',', format = 'f' )
+
+
+REP$egreso_total_vap  <- format( balance_anual[  anio == parametros$anio_fin  ]$egreso_total_vap,
+                                          digits = 2, nsmall = 2, big.mark = '.',
+                                          decimal.mark = ',', format = 'f' )
+
+#Balance corriente----------------------------------------------------------------------------------
+
+#Impacto--------------------------------------------------------------------------------------------
+impacto <- as.data.table( impacto )
+
+REP$impacto  <- format( impacto[  anio == parametros$anio_fin  ]$total_vap,
+                                 digits = 2, nsmall = 2, big.mark = '.',
+                                 decimal.mark = ',', format = 'f' )
+
+REP$aporte_ivm_vap <- format( impacto[  anio == parametros$anio_fin  ]$aporte_ivm_vap  ,
+                        digits = 2, nsmall = 2, big.mark = '.',
+                        decimal.mark = ',', format = 'f' )
+
+REP$aporte_ivm_vap_millones <- format( round( impacto[  anio == parametros$anio_fin  ]$aporte_ivm_vap / 1000000, 2 ),
+                              digits = 2, nsmall = 2, big.mark = '.',
+                              decimal.mark = ',', format = 'f' )
+
+REP$aporte_salud_vap <- format( impacto[  anio == parametros$anio_fin  ]$aporte_salud_vap  ,
+                                 digits = 2, nsmall = 2, big.mark = '.',
+                                 decimal.mark = ',', format = 'f' )
+
