@@ -10,19 +10,25 @@ Del presente estudio se obtienen las siguientes conclusiones:
 
 \item La \Sexpr{REP_seg} deberá depositar USD \Sexpr{REP$reserva_a_pagar_vap}, en los próximos 25 años, para completar el financiamiento de pensiones anticipadas y con mayor cuantía de la Jubilación Especial de los Servidores Públicos del Cuerpo de Vigilancia de la Comisión de Tránsito del Ecuador, en concordancia al artículo 2 del Proyecto Ley Reformatoria a la Ley de Seguridad Social para la Jubilación Especial para el Cuerpo de Vigilancia de la Comisión de Tránsito del Ecuador.
 
-\item La creación de la Jubilación Especial para el Cuerpo de Vigilancia de la Comisión de Tránsito del Ecuador provocará un perjuicio al IESS igual a USD \Sexpr{REP$impacto}, de los cuales USD \Sexpr{REP$aporte_ivm_vap} sería en perjuicio al Seguro de IVM y USD \Sexpr{REP$aporte_salud_vap} al Seguro de Salud General Individual y Familiar del IESS por el cese de aportes por cinco (5) años que dejaría de percibir estos Seguros.
+\item Dentro del Proyecto de Ley, no determina si el Estado participa del 40\% de las pensiones, según lo establece el artículo 237 de la Ley de Seguridad Social para el caso de la parte proporcional correspondiente a la jubilación de los servidores públicos de la Comisión de Tránsito del Ecuador.
+
+\item La creación de la Jubilación Especial para el Cuerpo de Vigilancia de la Comisión de Tránsito del Ecuador provocará que el IESS dejará de percibir USD \Sexpr{REP$impacto}, de los cuales USD \Sexpr{REP$aporte_ivm_vap} sería en perjuicio al Seguro de IVM y USD \Sexpr{REP$aporte_salud_vap} al Seguro de Salud General Individual y Familiar del IESS por la ausencia de aportes por cinco (5) años que dejarían de recibir estos Seguros. Estos valores deberían ser compensados a los Fondos de estos Seguros por medio de la respectiva reserva matemática.
 
 \item La Asamblea Nacional al aprobar el Proyecto Ley Reformatoria a la Ley de Seguridad Social para la jubilación Especial para el Cuerpo de Vigilancia de la Comisión de Tránsito del Ecuador, inobservó lo siguiente:
 
-\quad a) \, El artículo 287 de la Constitución de la República del Ecuador, que ordena: \textit{``Toda norma que cree una obligación financiada con recursos públicos establecerá la fuente de financiamiento correspondiente (...)''}; y
+\quad a) \, El artículo 287 de la Constitución de la República del Ecuador, que ordena: \textit{``Toda norma que cree una obligación financiada con recursos públicos establecerá la fuente de financiamiento correspondiente (...)''}.
 
 \quad b) \, El artículo 369 de la Constitución de la República del Ecuador, que ordena: \textit{``(...). La creación de nuevas prestaciones estará debidamente financiada´´}.
 
-\quad c) \, El artículo 2 de Ley Reformatoria a La Ley de Seguridad Social y a la Ley del Banco del Instituto Ecuatoriano de Seguridad Social, publicada en el Registro Oficial N° 605, de fecha 22 de julio de 2024, que establece: \textit{`` (...) Toda nueva prestación sobre la cual el Estado tenga que realizar contribuciones, deberá contarse previamente con el dictamen presupuestario favorable por parte del ente rector de la política pública de economía y finanzas''}.
+\quad c) \, El artículo 2 de Ley Reformatoria a La Ley de Seguridad Social y a la Ley del Banco del Instituto Ecuatoriano de Seguridad Social, publicada en el Registro Oficial N° 605, de fecha 22 de julio de 2024, que establece: \textit{`` (...) Toda nueva prestación sobre la cual el Estado tenga que realizar contribuciones, deberá contarse previamente con el dictamen presupuestario favorable por parte del ente rector de la política pública de economía y finanzas''}; y
 
 \quad d) \, El artículo 233 de la Ley de Seguridad Social que establece: \textit{``No se creará prestación alguna ni se mejorarán las existentes a cargo del Seguro Social Obligatorio aplicado por el IESS, si no se encontraren debidamente financiadas y respaldadas en los resultados de estudios actuariales que demuestren su solvencia y sostenibilidad´´}.
 
 \item La Asamblea Nacional justifica la creación de la nueva Jubilación Especial para el Cuerpo de Vigilancia de la Comisión de Tránsito del Ecuador por el alto riesgo de accidentes de trabajo y enfermedades profesionales de sus agentes de tránsito sin ningún estudio de puestos del Trabajo realizado por el Ministerio del Trabajo. Además, que incluye a los servidores con puestos administrativos en la jubilación especial. Y, no toma en cuenta la existencia del Seguro General de Riesgos del Trabajo, al que ya disponen los servidores de la CTE; es decir, realizan una justificación de riesgos del trabajo para obtener una rebaja de 5 años de aporte y una mayor pensión de vejez, contraviniendo el principio de “Equidad” en la entrega de las prestaciones del Seguro General Obligatorio en proporción directa al esfuerzo de los contribuyentes y a la necesidad de amparo de los beneficiarios, en función del bien común, establecidos en el artículo 1 de la Ley de Seguridad Social.
+
+\item En el Proyecto de Ley no se establece como la Comisión de Tránsito del Ecuador financiará el pago de reservas matemáticas que garantizarán en el futuro la entrega de veneficios.
+
+\item La CTE no explica el financiamiento con el que Ministerio de Economía y Finanzas creará nuevas partidas presupuestarías para el financiamiento de esta jubilación especial.
 
 \end{enumerate}
 
@@ -33,7 +39,7 @@ Las principales recomendaciones de esta Dirección son:
 \begin{enumerate}
 \item Se recomienda entregar la Jubilación Especial para el Cuerpo de Vigilancia de la Comisión de Tránsito del Ecuador, siempre y cuando se encuentre debidamente financiada de acuerdo al artículo 369 de la \legalcite{ConsEcu:2008}, amparado en estudios actuariales, en conformidad al artículo 233 de la \legalcite{LeySS} y deberá contar previamente con el dictamen presupuestario favorable por parte del ente rector de la política pública de economía y finanzas, conforme al artículo 2 de la \legalcite{reformaLSS24}.
 
-\item	En el caso que hubiera el debido financiamiento para la entrega de esta prestación, se recomienda crear un nuevo Fondo, formado exclusivamente con los valores recaudados por esta jubilación reducida, el cual poseerá su propia contabilidad, gastos administrativos y portafolio de inversiones. Y, para la entrega de esta prestación, se recomienda el cálculo de la reserva matemática por la diferencia de 25 a 30 años de aportes y la diferencia de edad entre la edad de derecho y los 60 años.
+\item	En el caso que hubiera el debido financiamiento para la entrega de esta prestación, se recomienda crear un nuevo Fondo, formado exclusivamente con los valores recaudados por esta jubilación reducida, el cual poseerá su propia contabilidad, gastos administrativos y portafolio de inversiones. Y, para la entrega de esta prestación, se recomienda el cálculo de la reserva matemática por la diferencia de 25 y a los años de aportes requeridos para la jubilación de vejez y la diferencia de edad entre la edad de derecho y la edad requeridas para la jubilación de vejez.
 \end{enumerate}
 
 % Atentamente,

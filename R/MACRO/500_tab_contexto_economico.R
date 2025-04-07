@@ -269,7 +269,9 @@ print(
 )
 
 #Tabla de resumen de hipótesis----------------------------------------------------------------------
-aux <- hipotesis
+aux <- hipotesis %>% 
+  rbind( ., c( 'Tasa de interés actuarial', 6.25 ) ) %>% 
+  mutate( tasas = as.numeric( tasas ) )
 
 aux_xtab <- xtable( aux, digits = c( 0, 0, 2 ) )
 

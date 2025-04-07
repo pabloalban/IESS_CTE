@@ -635,7 +635,7 @@ datos atípicos usando diagramas de cajas, y se remplazaron los valores atípico
 \texttt{na.kalman}. A continuación, se presenta la estimación de los coeficientes de la serie
 multivariante, con una diferenciación en la tabla \ref{tab:iess_modelo_macro_coef}.
 
-{\fontsize{10}{12}\selectfont
+{\fontsize{10}{13}\selectfont
 \begin{longtable}[H]{crrrc}
 \caption{Coeficientes del modelo macroeconómico}
 \label{tab:iess_modelo_macro_coef} \\

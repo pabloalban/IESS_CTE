@@ -8,16 +8,17 @@ En el presente capítulo, se presentan los resultados de la valuación de la Jub
 \section{Esquema pensional}
 \label{chp_valuacion:esquema}
 
-De acuerdo al proyecto de JUBILACIÓN ESPECIAL DE LAS Y LOS SERVIDORES PÚBLICOS DEL CUERPO DE VIGILANCIA LA COMISIÓN DE TRÁNSITO DEL ECUADOR, se tiene el siguiente esquema pensional:
+De acuerdo al proyecto de JUBILACIÓN ESPECIAL DE LAS Y LOS SERVIDORES PÚBLICOS DEL CUERPO DE VIGILANCIA DE LA COMISIÓN DE TRÁNSITO DEL ECUADOR, se tiene el siguiente esquema pensional:
 
 \textbf{1. Requisitos:}
 
-Se podrá acoger al derecho a jubilación quienes hayan acreditado veinte y cinco años de imposiciones,
-sin límite de edad.
+Se podrá acoger al derecho a jubilación quienes hayan acreditado aportes de al menos veinte y cinco (25) años de imposiciones, sin límite de edad, como servidor de la Comisión de Tránsito del Ecuador. (La legislación que se pretende para el efecto no cita la expresión "servidor de la Comisión de Tránsito del Ecuador expuesto a Riesgo").
+
+Si la Ley, no cita que el beneficio será únicamente para los servidores que son considerados Cuerpo de Vigilancia, expuestos al riesgos, se asumirá que ingresan al beneficio todos los servidores y cuerpo de vigilancia.
 
 \textbf{2. Prestaciones:}
 
-La pensión estará sujeta a la siguiente tabla porcentual y de acuerdo con su
+El beneficio mensual estará sujeto a la siguiente tabla porcentual, de acuerdo con su
 última remuneración mensual que hubiere percibido:
 
 {\fontsize{10}{10}\selectfont
@@ -51,16 +52,12 @@ Tiempo de servicio:
 \textbf{3. Financiamiento:}
 
 A partir de ese momento se iniciará con el aporte personal de su remuneración mensual unificada del
-18,97\% de la RMU como aporte personal. La diferencia de financiamiento por los años de reducción del
-aporte, esto es entre 25 y 30 años y entre requisitos de edad, será reconocido por parte de la Comisión
-de Tránsito del Ecuador, como reserva matemática, valor que será determinado por la unidad
-administrativa correspondiente del IESS, y, será depositado en el Instituto Ecuatoriano de Seguridad
-Social previo a la entrega del beneficio.
+18,97\% de la RMU como aporte personal al Seguro de IVM. La diferencia de financiamiento por los años de reducción del aporte, esto es entre 25 y más años de requisitos de edad, será reconocido por parte de la Comisión de Tránsito del Ecuador, como reserva matemática, valor que será determinado por la unidad administrativa correspondiente del IESS, y, será depositado en el Instituto Ecuatoriano de Seguridad Social previo a la entrega del beneficio.
 
 {\fontsize{10}{11}\selectfont
 \begin{longtable}[H]{lrrr}
 \caption{Porcentaje de aportación a los trabajadores de la \Sexpr{REP_seg}}\\
-\label{tab:coescop_tab_tasa} \\
+\label{tab:cte_tab_tasa} \\
 \toprule
 Seguro:	&
 Personal (\%) &
@@ -87,17 +84,24 @@ Total (\%)\\
 \end{longtable}
 }
 
-% Balance --------------------------------------------------------------------------------------
-\section{Valuación actuarial}
-\label{chp_valuacion:balance}
+Es necesario aclarar que la reserva matemática no se explica en el Proyecto de Ley, como se financiará, esto lo ratifica el beto presidencial, emitido mediante oficio No. T.0493-SGJ-25-0078, de fecha 17 de marzo de 2025, en su literal c, con las siguientes palabras:
 
+\textit{``c) No se especifica el financiamiento para la prestación, ni para la entrega del beneficio a
+nuevo personal, inobservando de esta forma una vez más, lo dispuesto en el artículo 369 de la
+Constitución de la República del Ecuador y el literal j) del artículo 6 de la Ley de Seguridad Social,
+en lo referente a que toda nueva prestación sobre la cual el Estado (en este caso la Comisión
+de Tránsito del Ecuador) tenga que realizar contribuciones, deberá contar previamente con el
+dictamen presupuestario favorable por parte del ente rector de la política pública de economía
+y finanzas´´}.
+
+Para las proyecciones de los aportes, se obtienen de los sueldos actuales y tienen un crecimiento de 1,96\% anual (ver tabla \ref{tab:cte_tab_tasa}).
 
 %---------------------------------------------------------------------------------------------------
 
-\subsection{Balance corriente}
+\section{Balance corriente}
 \label{chp_valuacionactu:balcorr}
 
-Teniendo en cuenta el esquema pensional mostrado en la sección \ref{chp_valuacion:esquema}, se elaboran las respectivas proyecciones actuariales a 25 años, en el período comprendido entre 2025 a 2050, siguiendo las hipótesis actuariales definidas en el capítulo \ref{chp_hipotesis}. En el presente balances se estima el gasto prestacional con el costo de su reserva matemática vitalicia; es decir, los valores necesarios para pagar pensiones desde la fecha de derecho hasta la fecha de defunción del pensionista y el posible pago de montepío a su conyugue o huérfanos menores de dieciocho años (18), según la normativa vigente del IESS. 
+Teniendo en cuenta el esquema pensional mostrado en la sección \ref{chp_valuacion:esquema}, se elaboran las respectivas proyecciones actuariales a 25 años, en el período comprendido entre 2025 a 2049, siguiendo las hipótesis actuariales definidas en el capítulo \ref{chp_hipotesis}. En el presente balance,  se estima el gasto prestacional con el costo de su reserva matemática determinado para un beneficio vitalicio; es decir, los valores necesarios para pagar pensiones desde la fecha de derecho hasta la fecha de defunción del pensionista y el pago de montepío a su conyugue Y huérfanos menores de dieciocho años (18), según la normativa vigente del IESS. 
 
 Se opta por esta forma de registrar el gasto prestacional, debido a que, según el esquema pensional propuesto, las entidades de seguridad ciudadana y orden público deberán transferir al Fondo del Seguro de IVM el valor de una reserva matemática por el pago de las pensiones futuras, sustraído los aportes personales y patronales. En la tabla \ref{tab:iess_balance_cap}, se presenta el balance en términos corrientes, el cual presenta las proyecciones de nuevos pensionistas y los valores a transferir por cada entidad cada año.
 
@@ -160,7 +164,7 @@ Año:
 
 
 \begin{landscape}
-\subsection{Balance actuarial}
+\section{Balance actuarial}
 \label{chp_valuacionactu:balactu}
 \vspace*{\fill}
 
@@ -212,7 +216,7 @@ Año:
 
 
 
-De los resultados de la valuación actuarial, se concluye que durante el período 2025 a 2050: se recaudará USD \Sexpr{REP$aporte_coescop_vap} aportes personales y las entidades de seguridad ciudadana y orden público deberán transferir USD \Sexpr{REP$reserva_a_pagar_vap}, para cubrir los egresos por las prestaciones por pensiones, montepío y gastos administrativos por USD \Sexpr{REP$egreso_total_vap}.
+De los resultados de la valuación actuarial, se concluye que durante el período 2025 a 2049: se recaudará USD \Sexpr{REP$aporte_coescop_vap} aportes personales y la Comisión de Tránsito del Ecuador deberá transferir USD \Sexpr{REP$reserva_a_pagar_vap}, en valor actual, para cubrir los egresos por las prestaciones por pensiones, montepío y sumar a estos gastos administrativos, dando un totla de USD \Sexpr{REP$egreso_total_vap}.
 
 % Impacto --------------------------------------------------------------------------------------
 \section{Valores dejados de percibir por años aportes al IESS}
@@ -222,12 +226,12 @@ Además de los valores antes descritos, el Fondo de IVM del IESS dejará de perc
 
 {\fontsize{10}{13}\selectfont
 \begin{longtable}[H]{R{0.5cm}R{2.0cm}R{2.0cm}R{2.0cm}R{2.0cm}R{2.0cm}R{2.0cm}}
-\caption{Valores dejados de percibir por años aportes al IESS por la Jubilación Especiual de la \Sexpr{REP_seg} }\\
+\caption{Valores dejados de percibir por años aportes al IESS por la Jubilación Especial de la \Sexpr{REP_seg} }\\
 \label{tab:iess_balance_vap} \\
 \toprule
 \multicolumn{1}{l}{\multirow{2}{*}{Año:}} & 
 \multicolumn{3}{c}{En términos corrientes} &
-\multicolumn{3}{c}{Valor a tiempo presente} \\
+\multicolumn{3}{c}{Valor a tiempo presente (acumulado)} \\
 \cmidrule(lr){2-4} \cmidrule(lr){5-7}
 & Aportes al Seguro de IVM
 & Aporte a Salud

@@ -193,7 +193,7 @@ sistema de dolarización de la economía se mantendrá vigente en todo el horizo
 \label{chp_hipotesis:paramecfin:resumparam}
 
 En la tabla \ref{tab:iess_hip_macro} se presentan los promedios de los valores estimados de tasas de
-variación, período 2025 a 2050, el detalle de los cálculos se encuentra en el capítulo \ref{chp_contexto}. 
+variación, período 2025 a 2049, el detalle de los cálculos se encuentra en el capítulo \ref{chp_contexto}. 
 
  \begin{table}[H]
  \centering
@@ -220,7 +220,7 @@ toda vez que las inversiones deben recuperar primero su poder adquisitivo (infla
 
 Se estableció una tasa más alta de crecimiento para el SBU con respecto al salario de cotización, pues el primero históricamente registra un crecimiento mayor. Tanto el crecimiento del SBU como el promedio del salario de cotización crecerán a una tasa mayor que la inflación, lo cual garantiza que el poder adquisitivo de los salarios se incrementará en el tiempo.  
 
-Mediante la aplicación de la metodología de series de tiempo, se realizaron predicción para el período de valuación y, más tarde, se promediaron estas predicciones. Se considera que las tasas de crecimiento del salario promedio y en la tasa de crecimiento real del PIB observadas a finales de la década pasada fueron debido a los altos precios del crudo (principal exportación del Ecuador), el cual se situaba por los USD 100 el barril, y que este escenario no se va a volver repetir en los próximos años. 
+Mediante la aplicación de la metodología de series de tiempo, se realizaron predicción es para el período de valuación y, más tarde, se promediaron estas predicciones. Se considera que las tasas de crecimiento del salario promedio y en la tasa de crecimiento real del PIB observadas a finales de la década pasada fueron debido a los altos precios del crudo (principal exportación del Ecuador), el cual se situaba por los USD 100 el barril, y que este escenario no se va a volver repetir en los próximos años. 
 
 En cuanto a las tasas de rendimiento de las inversiones, se considera el paquete de inversiones
 que mantuvo y mantiene el BIESS, extrayendo las tasas nominales de cada una de las inversiones

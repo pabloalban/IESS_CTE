@@ -93,7 +93,7 @@ parametros$edad_max <- 105
 
 # Incluir casos según corresponda
 parametros$horizonte <- 25 # en años
-parametros$anio_fin <- parametros$anio + parametros$horizonte  # Año fin de la proyección
+parametros$anio_fin <- 2049  # Año fin de la proyección
 parametros$edad_max <- 105
 
 # Variables automáticas ----------------------------------------------------------------------------

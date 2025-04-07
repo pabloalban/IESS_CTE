@@ -114,7 +114,7 @@ malla_ivm <- coescop %>%
                                 aporte_salud,
                                 0 ) ) %>%
   mutate( aporte_coescop = if_else( anio >= anio_derecho_coescop,
-                                    0.1626 * 12 * salario * i_p_acu * factor,
+                                    0.1897 * 12 * salario * i_p_acu * factor,
                                     0 ) )
   
 #Generación de la malla para COESCOP----------------------------------------------------------------
