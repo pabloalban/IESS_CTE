@@ -84,7 +84,7 @@ Total (\%)\\
 \end{longtable}
 }
 
-Es necesario aclarar que la reserva matemática no se explica en el Proyecto de Ley, como se financiará, esto lo ratifica el beto presidencial, emitido mediante oficio No. T.0493-SGJ-25-0078, de fecha 17 de marzo de 2025, en su literal c, con las siguientes palabras:
+Es necesario aclarar que la reserva matemática no se explica en el Proyecto de Ley, como se financiará, esto lo ratifica el veto presidencial, emitido mediante oficio No. T.0493-SGJ-25-0078, de fecha 17 de marzo de 2025, en su literal c, con las siguientes palabras:
 
 \textit{``c) No se especifica el financiamiento para la prestación, ni para la entrega del beneficio a
 nuevo personal, inobservando de esta forma una vez más, lo dispuesto en el artículo 369 de la
@@ -216,7 +216,7 @@ Año:
 
 
 
-De los resultados de la valuación actuarial, se concluye que durante el período 2025 a 2049: se recaudará USD \Sexpr{REP$aporte_coescop_vap} aportes personales y la Comisión de Tránsito del Ecuador deberá transferir USD \Sexpr{REP$reserva_a_pagar_vap}, en valor actual, para cubrir los egresos por las prestaciones por pensiones, montepío y sumar a estos gastos administrativos, dando un totla de USD \Sexpr{REP$egreso_total_vap}.
+De los resultados de la valuación actuarial, se concluye que durante el período 2025 a 2049: se recaudará USD \Sexpr{REP$aporte_coescop_vap} aportes personales y la Comisión de Tránsito del Ecuador deberá transferir USD \Sexpr{REP$reserva_a_pagar_vap}, en valor actual, para cubrir los egresos por las prestaciones por pensiones, montepío y sumar a estos gastos administrativos, dando un total de USD \Sexpr{REP$egreso_total_vap}.
 
 % Impacto --------------------------------------------------------------------------------------
 \section{Valores dejados de percibir por años aportes al IESS}

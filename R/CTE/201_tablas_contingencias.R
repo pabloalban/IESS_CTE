@@ -192,7 +192,8 @@ tabla_imp_sexo <- cte_servidores %>%
                  sexo_M,
                  por_sexo_M,
                  total,
-                 por_total ) 
+                 por_total ) %>% 
+  mutate_at( c( 2, 4, 6 ), as.integer )
 
 #Tabla de entradas y salidas------------------------------------------------------------------------
 
